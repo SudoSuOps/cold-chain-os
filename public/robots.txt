@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://coldchainOS.org/sitemap.xml
+Sitemap: https://coldchainos.org/sitemap.xml

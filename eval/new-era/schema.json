@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://coldchainOS.org/eval/new-era/schema.json",
+  "$id": "https://coldchainos.org/eval/new-era/schema.json",
   "title": "coldchainOS New Era evaluation case",
   "description": "One synthetic evaluation case. Labels are drafts until reviewed; a generated label is not verified ground truth.",
   "type": "object",

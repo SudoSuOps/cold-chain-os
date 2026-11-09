@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-const SITE = 'https://coldchainOS.org'
+const SITE = 'https://coldchainos.org'
 const REPO = 'https://github.com/SudoSuOps/cold-chain-os'
 const X = 'https://x.com/bestinbull'
 const faq = JSON.parse(readFileSync(resolve('src/faq.json'), 'utf8'))

@@ -4,14 +4,14 @@
 
 ## Key pages
 
-- [Home](https://coldchainOS.org/): what the project is, the problem, direction, and a working energy-charge calculator.
-- [Why coldchainOS](https://coldchainOS.org/why/): cold storage as a connected system; three kinds of velocity; market value without a TAM; three illustrative worked examples; NDA and data control; a dated, sourced "why now".
-- [Last mile](https://coldchainOS.org/last-mile/): definitions, recipients, product categories, sourced market context and an illustrative route-economics calculator.
-- [New era](https://coldchainOS.org/new-era/): AI, robotics, compute and edge-appliance design goals; confidentiality and cybersecurity review questions; a dated evidence snapshot; draft evaluation cases.
-- [Datasets](https://coldchainOS.org/datasets/): a small sample of model-generated CRE question-and-answer records, with raw JSON and an independent math re-check.
-- [Compute room](https://coldchainOS.org/compute/): an illustrative simulation of a GPU and dataset pipeline. Not live telemetry.
-- [Dev room](https://coldchainOS.org/deal-room/): a local-only evidence checklist prototype. Nothing is uploaded.
-- [Brand](https://coldchainOS.org/brand/): logos, colour, type, icons and voice.
+- [Home](https://coldchainos.org/): what the project is, the problem, direction, and a working energy-charge calculator.
+- [Why coldchainOS](https://coldchainos.org/why/): cold storage as a connected system; three kinds of velocity; market value without a TAM; three illustrative worked examples; NDA and data control; a dated, sourced "why now".
+- [Last mile](https://coldchainos.org/last-mile/): definitions, recipients, product categories, sourced market context and an illustrative route-economics calculator.
+- [New era](https://coldchainos.org/new-era/): AI, robotics, compute and edge-appliance design goals; confidentiality and cybersecurity review questions; a dated evidence snapshot; draft evaluation cases.
+- [Datasets](https://coldchainos.org/datasets/): a small sample of model-generated CRE question-and-answer records, with raw JSON and an independent math re-check.
+- [Compute room](https://coldchainos.org/compute/): an illustrative simulation of a GPU and dataset pipeline. Not live telemetry.
+- [Dev room](https://coldchainos.org/deal-room/): a local-only evidence checklist prototype. Nothing is uploaded.
+- [Brand](https://coldchainos.org/brand/): logos, colour, type, icons and voice.
 
 ## Source of truth
 

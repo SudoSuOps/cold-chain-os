@@ -4,7 +4,7 @@ import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import { join, resolve, relative } from 'node:path'
 
 const DIST = resolve('dist')
-const SITE = 'https://coldchainOS.org'
+const SITE = 'https://coldchainos.org'
 const fails = []
 const warns = []
 const fail = (f, m) => fails.push(`${f}: ${m}`)
