@@ -8,7 +8,7 @@
 .cook__buckets li { display: grid; grid-template-columns: 130px minmax(0, 1fr) 80px; gap: 14px; align-items: center; font-size: 0.92rem; }
 @media (max-width: 520px) { .cook__buckets li { grid-template-columns: minmax(0, 1fr) 80px; } .cook__bar { grid-column: 1 / -1; order: 3; } }
 .cook__k { color: var(--muted); }
-.cook__bar { height: 10px; background: #0a111d; border-radius: 2px; overflow: hidden; }
+.cook__bar { height: 10px; background: var(--bg); border-radius: 2px; overflow: hidden; }
 .cook__bar i { display: block; height: 100%; background: var(--ice); }
 .cook__buckets li:nth-child(3) .cook__bar i { background: var(--ice-dim); }
 .cook__buckets li:nth-child(4) .cook__bar i { background: var(--hot); }
@@ -22,7 +22,7 @@
 .list { scrollbar-color: var(--ice-dim) var(--bg); scrollbar-width: thin; display: grid; gap: 6px; max-height: 640px; overflow: auto; padding-right: 4px; }
 @media (max-width: 900px) { .list { max-height: 280px; } }
 .list button { width: 100%; text-align: left; font: inherit; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; cursor: pointer; display: grid; gap: 2px; }
-.list button[aria-current='true'] { border-color: var(--ice); background: #17263f; }
+.list button[aria-current='true'] { border-color: var(--ice); background: var(--ccos-surface-2); }
 .list__name { font-weight: 600; }
 .list__sub { color: var(--muted); font-size: 0.82rem; }
 .list__meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
@@ -46,12 +46,12 @@
 .qa__sys summary { cursor: pointer; font-family: var(--font-mono); }
 .qa__sys p { margin: 8px 0 0; }
 .bubble { border-radius: 6px; padding: 14px 16px; border: 1px solid var(--line); }
-.bubble--q { background: #0e1727; }
-.bubble--a { background: #0a111d; border-color: var(--ice-dim); }
+.bubble--q { background: var(--ccos-surface); }
+.bubble--a { background: var(--bg); border-color: var(--ice-dim); }
 .bubble__who { display: block; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ice); margin-bottom: 6px; }
 .bubble p { margin: 0; white-space: pre-line; }
-.bubble pre, .json { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.55; }
-.json { scrollbar-color: var(--ice-dim) var(--bg); background: #0a111d; border: 1px solid var(--line); border-radius: 6px; padding: 16px; max-height: 560px; overflow: auto; }
+.bubble pre, .json { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-code); font-size: 0.82rem; line-height: 1.55; }
+.json { scrollbar-color: var(--ice-dim) var(--bg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 16px; max-height: 560px; overflow: auto; }
 
 .recheck { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 18px; }
 .recheck h4 { margin: 0 0 10px; font-size: 1rem; }

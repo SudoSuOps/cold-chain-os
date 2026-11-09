@@ -10,6 +10,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         compute: resolve(__dirname, 'compute/index.html'),
         datasets: resolve(__dirname, 'datasets/index.html'),
+        brand: resolve(__dirname, 'brand/index.html'),
       },
     },
   },

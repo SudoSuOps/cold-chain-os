@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#0b1220"/><g stroke="#9fd8f5" stroke-width="4" stroke-linecap="round"><path d="M32 12v40M15 22l34 20M15 42l34-20"/></g><circle cx="32" cy="32" r="5" fill="#0b1220" stroke="#9fd8f5" stroke-width="3"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="coldchainOS">
+  <title>coldchainOS</title>
+  <rect width="32" height="32" rx="7" fill="#06142A"/><g transform="translate(0 2.6)"><path d="M13.6 15.6 C9 17 3.2 16 1.8 11.4 C0.8 7.8 2.4 3.6 6.2 0.4 C4.8 3.6 4.8 6.6 6.2 8.6 C7.8 10.8 10.4 11.2 13.6 10.4 Z" fill="#8FCFF5"/>
+  <path d="M15 18.6 C11.6 18.2 6.6 18.2 4.2 18.6 C3 18.8 2.6 19.8 2.7 21.2 C3 24.8 5 28.4 8.4 28.6 C11.6 28.8 13.6 26.6 14.4 23.8 C14.9 22 15.1 20.4 15 18.6 Z" fill="#4A9BE8"/>
+  <path d="M13.6 15.6 C9 17 3.2 16 1.8 11.4 C0.8 7.8 2.4 3.6 6.2 0.4 C4.8 3.6 4.8 6.6 6.2 8.6 C7.8 10.8 10.4 11.2 13.6 10.4 Z" fill="#8FCFF5" transform="matrix(-1 0 0 1 32 0)"/>
+  <path d="M15 18.6 C11.6 18.2 6.6 18.2 4.2 18.6 C3 18.8 2.6 19.8 2.7 21.2 C3 24.8 5 28.4 8.4 28.6 C11.6 28.8 13.6 26.6 14.4 23.8 C14.9 22 15.1 20.4 15 18.6 Z" fill="#4A9BE8" transform="matrix(-1 0 0 1 32 0)"/>
+  <path d="M2.6 16.2 H29.4 V18.4 H2.6 Z" fill="#B8C2CC"/></g>
+</svg>

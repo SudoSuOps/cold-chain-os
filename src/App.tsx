@@ -1,12 +1,13 @@
 import Calculator from './Calculator.tsx'
 import HeroIllustration from './HeroIllustration.tsx'
+import Icon, { type IconName } from './Icon.tsx'
 import { Footer, Header } from './SiteChrome.tsx'
 import { ISSUES_URL, REPO_URL } from './links.ts'
 
 function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-h">
-      <div className="wrap hero__grid">
+      <div className="wrap">
         <div className="hero__copy">
           <p className="eyebrow">Open source · Cold chain · Real-world evidence</p>
           <h1 id="hero-h">Does the cold chain pencil?</h1>
@@ -22,19 +23,16 @@ function Hero() {
           </div>
           <p className="fineprint">30 years of transaction experience. $8 billion in closed deals. Self-funded. No VC. No token.</p>
         </div>
-        <div className="hero__art">
-          <HeroIllustration />
-        </div>
       </div>
     </section>
   )
 }
 
 function Problem() {
-  const items = [
-    ['01', 'The building', 'Usable space, insulation, layout, loading, and condition.'],
-    ['02', 'The machinery', 'Refrigeration capacity, equipment condition, maintenance, and the requirements of the stored product.'],
-    ['03', 'The operating math', 'Electricity, demand charges, utilization, downtime, and replacement costs.'],
+  const items: [IconName, string, string][] = [
+    ['cold-storage-facility', 'The building', 'Usable space, insulation, layout, loading, and condition.'],
+    ['refrigeration', 'The machinery', 'Refrigeration capacity, equipment condition, maintenance, and the requirements of the stored product.'],
+    ['energy', 'The operating math', 'Electricity, demand charges, utilization, downtime, and replacement costs.'],
   ]
   return (
     <section className="section" id="problem" aria-labelledby="problem-h">
@@ -48,9 +46,9 @@ function Problem() {
           override reality in another, and the actual economics stay hidden until it’s expensive to find out.
         </p>
         <ul className="cards cards--3">
-          {items.map(([n, t, d]) => (
-            <li key={n} className="card">
-              <span className="card__n">{n}</span>
+          {items.map(([icon, t, d]) => (
+            <li key={icon} className="card">
+              <Icon name={icon} />
               <h3>{t}</h3>
               <p>{d}</p>
             </li>
@@ -62,11 +60,11 @@ function Problem() {
 }
 
 function Building() {
-  const areas = [
-    ['Document and evidence intake', 'Bring leases, equipment records, and utility bills into one place so nothing important stays buried.'],
-    ['Transparent underwriting calculations', 'Every number traceable to its inputs, so assumptions are visible and the arithmetic can be checked.'],
-    ['Domain-specific datasets and evaluations', 'Cold-chain examples and tests that show whether a tool actually handles the real problem.'],
-    ['Tools that can run on locally controlled compute', 'Work with sensitive operating data without sending it somewhere you don’t control.'],
+  const areas: [IconName, string, string][] = [
+    ['evidence', 'Document and evidence intake', 'Bring leases, equipment records, and utility bills into one place so nothing important stays buried.'],
+    ['underwriting', 'Transparent underwriting calculations', 'Every number traceable to its inputs, so assumptions are visible and the arithmetic can be checked.'],
+    ['dataset', 'Domain-specific datasets and evaluations', 'Cold-chain examples and tests that show whether a tool actually handles the real problem.'],
+    ['local-compute', 'Tools that can run on locally controlled compute', 'Work with sensitive operating data without sending it somewhere you don’t control.'],
   ]
   const steps = ['Collect evidence', 'Identify gaps', 'Check assumptions', 'Review the math']
   return (
@@ -76,8 +74,9 @@ function Building() {
         <h2 id="building-h">Evidence in. Assumptions visible. Math you can check.</h2>
         <p className="status-tag">Project direction — in development, not a list of released features.</p>
         <ul className="cards cards--2">
-          {areas.map(([t, d]) => (
+          {areas.map(([icon, t, d]) => (
             <li key={t} className="card">
+              <Icon name={icon} />
               <span className="chip">In development</span>
               <h3>{t}</h3>
               <p>{d}</p>
@@ -131,6 +130,11 @@ function FieldLab() {
             energy balance before making performance claims.
           </p>
         </div>
+        <div>
+        <figure className="hero__art lab__art" style={{ margin: '0 0 20px' }}>
+          <HeroIllustration />
+          <figcaption className="art-cap">Schematic of the portable enclosure and measurement points. Illustrative, not to scale.</figcaption>
+        </figure>
         <div className="card lab__card">
           <h3>Founder-reported hardware</h3>
           <ul className="plain">
@@ -139,6 +143,7 @@ function FieldLab() {
             <li>A research concept involving two S21 Pro Bitcoin miners and potential useful applications of their waste heat.</li>
           </ul>
           <p className="fineprint">An experiment, secondary to the cold-chain underwriting work.</p>
+        </div>
         </div>
       </div>
     </section>

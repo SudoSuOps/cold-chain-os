@@ -67,6 +67,7 @@ export function Footer({ home = false }: { home?: boolean }) {
         <a href={home ? '#top' : '/'}>coldchainOS.org</a>
         <a href={REPO_URL} rel="noopener">GitHub</a>
         <a href={X_URL} rel="noopener">X @bestinbull</a>
+        <a href="/brand/">Brand</a>
         <span>An independent project in active development.</span>
       </div>
     </footer>

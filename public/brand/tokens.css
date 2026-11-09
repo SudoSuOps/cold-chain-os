@@ -1,0 +1,138 @@
+/* coldchainOS design tokens — v1.0
+   Fonts: Archivo (display) + Inter (body/UI), both SIL OFL 1.1, self-hosted in ./fonts
+   Default theme is dark. Add data-theme="light" on <html> or a section for light. */
+
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/archivo-variable-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/inter-variable-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* ---- Core palette ---- */
+  --ccos-midnight-navy: #06142A;   /* rgb(6 20 42) */
+  --ccos-deep-charcoal: #1B2129;   /* rgb(27 33 41) */
+  --ccos-ice-blue: #8FCFF5;        /* rgb(143 207 245) */
+  --ccos-glacier-blue: #1B66B9;    /* rgb(27 102 185) */
+  --ccos-frost-white: #EEF4FA;     /* rgb(238 244 250) */
+  --ccos-platinum: #B8C2CC;        /* rgb(184 194 204) */
+  --ccos-muted-text: #9AAABD;      /* rgb(154 170 189) on dark */
+  --ccos-muted-text-light: #4A5A6E;/* rgb(74 90 110) on light */
+  --ccos-surface: #0D1F3A;         /* rgb(13 31 58) */
+  --ccos-surface-2: #13284A;       /* rgb(19 40 74) */
+  --ccos-border: #2A3F5F;          /* rgb(42 63 95) */
+  --ccos-border-light: #D3DCE6;    /* rgb(211 220 230) */
+  --ccos-success: #5CCB96;  --ccos-success-light: #17744A;
+  --ccos-warning: #F2BC5A;  --ccos-warning-light: #8A5300;
+  --ccos-error: #F58A8C;    --ccos-error-light: #B42329;
+
+  /* ---- Semantic (dark, default) ---- */
+  --color-bg: var(--ccos-midnight-navy);
+  --color-surface: var(--ccos-surface);
+  --color-surface-raised: var(--ccos-surface-2);
+  --color-text: var(--ccos-frost-white);
+  --color-text-secondary: var(--ccos-muted-text);
+  --color-accent: var(--ccos-ice-blue);
+  --color-link: var(--ccos-ice-blue);
+  --color-link-hover: var(--ccos-frost-white);
+  --color-button-bg: var(--ccos-ice-blue);
+  --color-button-text: var(--ccos-midnight-navy);
+  --color-button-secondary-border: var(--ccos-platinum);
+  --color-button-secondary-text: var(--ccos-frost-white);
+  --color-border: var(--ccos-border);
+  --color-focus: var(--ccos-ice-blue);
+  --color-success: var(--ccos-success);
+  --color-warning: var(--ccos-warning);
+  --color-error: var(--ccos-error);
+
+  /* ---- Typography ---- */
+  --font-display: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-data: "Inter", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-display-stretch: 106%;
+  --weight-regular: 400; --weight-medium: 500; --weight-semibold: 600; --weight-bold: 700;
+
+  /* fluid scale: mobile (360px) → desktop (1280px) */
+  --text-display: clamp(2.75rem, 1.9rem + 3.8vw, 4.5rem);  /* 44 → 72 */
+  --text-h1: clamp(2.25rem, 1.65rem + 2.6vw, 3.5rem);      /* 36 → 56 */
+  --text-h2: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);       /* 28 → 40 */
+  --text-h3: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);     /* 22 → 28 */
+  --text-h4: clamp(1.1875rem, 1.12rem + 0.3vw, 1.375rem);  /* 19 → 22 */
+  --text-body-lg: clamp(1.125rem, 1.07rem + 0.25vw, 1.25rem); /* 18 → 20 */
+  --text-body: clamp(1rem, 0.98rem + 0.1vw, 1.0625rem);    /* 16 → 17 */
+  --text-small: clamp(0.875rem, 0.86rem + 0.07vw, 0.9375rem); /* 14 → 15 */
+  --text-label: clamp(0.75rem, 0.74rem + 0.05vw, 0.8125rem);  /* 12 → 13 */
+  --leading-tight: 1.05; --leading-heading: 1.15; --leading-body: 1.6; --leading-ui: 1.4;
+  --tracking-display: -0.02em; --tracking-heading: -0.01em; --tracking-body: 0;
+  --tracking-label: 0.08em;
+
+  /* ---- Spacing (4px base) ---- */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --space-9: 96px; --space-10: 128px;
+
+  /* ---- Layout ---- */
+  --container-sm: 640px; --container-md: 880px; --container-lg: 1200px; --container-xl: 1360px;
+  --gutter: clamp(16px, 4vw, 48px);
+
+  /* ---- Radii ---- */
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg: 14px; --radius-pill: 999px;
+
+  /* ---- Borders ---- */
+  --border-hairline: 1px solid var(--color-border);
+  --border-strong: 1px solid var(--ccos-platinum);
+
+  /* ---- Shadows (deep, low-spread; used sparingly) ---- */
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.35);
+  --shadow-2: 0 8px 24px rgb(0 0 0 / 0.35), 0 1px 0 rgb(255 255 255 / 0.03) inset;
+  --shadow-3: 0 24px 64px rgb(0 0 0 / 0.45);
+
+  /* ---- Focus ---- */
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 2px;
+  --focus-ring: 0 0 0 var(--focus-ring-offset) var(--color-bg), 0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width)) var(--color-focus);
+
+  /* ---- Motion ---- */
+  --duration-fast: 120ms; --duration-base: 200ms; --duration-slow: 360ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+}
+
+[data-theme="light"] {
+  --color-bg: var(--ccos-frost-white);
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #F6F9FC;
+  --color-text: var(--ccos-midnight-navy);
+  --color-text-secondary: var(--ccos-muted-text-light);
+  --color-accent: var(--ccos-glacier-blue);
+  --color-link: var(--ccos-glacier-blue);
+  --color-link-hover: var(--ccos-midnight-navy);
+  --color-button-bg: var(--ccos-glacier-blue);
+  --color-button-text: var(--ccos-frost-white);
+  --color-button-secondary-border: var(--ccos-midnight-navy);
+  --color-button-secondary-text: var(--ccos-midnight-navy);
+  --color-border: var(--ccos-border-light);
+  --color-focus: var(--ccos-glacier-blue);
+  --color-success: var(--ccos-success-light);
+  --color-warning: var(--ccos-warning-light);
+  --color-error: var(--ccos-error-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0ms; --duration-base: 0ms; --duration-slow: 0ms; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important; scroll-behavior: auto !important;
+  }
+}
+
+/* Utility: tabular numerals for data */
+.ccos-num { font-family: var(--font-data); font-variant-numeric: tabular-nums lining-nums; font-feature-settings: "tnum" 1, "lnum" 1; }

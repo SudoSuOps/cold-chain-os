@@ -31,9 +31,19 @@ npm run preview -- --host   # serve dist/ locally at http://localhost:4173
 
 Any static host works. For Cloudflare Pages: build command `npm run build`, output directory `dist`, Node 18+. No environment variables are needed. DNS and deployment are intentionally not configured here.
 
+## Brand
+
+The site uses the coldchainOS brand kit v1.0 (kept outside the repo; the guide PDF and source portrait are not committed).
+
+- Tokens, fonts and licence notice: `public/brand/` (`tokens.css` is linked from every page head; `src/styles.css` maps its variables onto the brand tokens).
+- Logos (SVG): `public/brand/logo/`. Header uses `horizontal-on-dark` and falls back to `mark-on-dark` below 340px (`src/Wordmark.tsx`).
+- Bull hero images: `public/brand/hero/`. Landing hero follows the kit's integration guide.
+- Favicon pack, `site.webmanifest`: `public/`. Open Graph image: `public/og/`.
+- Icons are generated into `src/Icon.tsx` from the kit's SVGs.
+- Brand page: `/brand/`.
+- The brand name, wordmark, mark and Bull artwork are not covered by any code licence. See `public/brand/NOTICE.md`.
+
 ## Editing notes
 
-- **Logo:** the wordmark is typographic placeholder text in `src/Wordmark.tsx`; swap in the brand asset there. Favicon is `public/favicon.svg`.
 - **Links:** repo and Issues URLs live in `src/links.ts`.
-- **Social image:** `public/og.svg` is referenced by Open Graph tags. Some platforms don't render SVG previews; export a 1200×630 PNG and update `index.html` if needed.
 - **License:** none has been chosen yet. Add a `LICENSE` file once the owner decides.
