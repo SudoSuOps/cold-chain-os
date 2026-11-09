@@ -1,54 +1,7 @@
-import { useEffect, useState } from 'react'
 import Calculator from './Calculator.tsx'
 import HeroIllustration from './HeroIllustration.tsx'
-import Wordmark from './Wordmark.tsx'
+import { Footer, Header } from './SiteChrome.tsx'
 import { ISSUES_URL, REPO_URL } from './links.ts'
-
-const NAV = [
-  ['problem', 'The Problem'],
-  ['building', 'What We’re Building'],
-  ['field-lab', 'Field Lab'],
-  ['participate', 'Participate'],
-] as const
-
-function Header() {
-  const [open, setOpen] = useState(false)
-  useEffect(() => {
-    if (!open) return
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [open])
-
-  return (
-    <header className="site-header">
-      <div className="wrap site-header__row">
-        <Wordmark />
-        <button
-          className="nav-toggle"
-          type="button"
-          aria-expanded={open}
-          aria-controls="site-nav"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? 'Close' : 'Menu'}
-        </button>
-        <nav id="site-nav" className="nav" data-open={open} aria-label="Primary">
-          <ul>
-            {NAV.map(([id, label]) => (
-              <li key={id}>
-                <a href={`#${id}`} onClick={() => setOpen(false)}>{label}</a>
-              </li>
-            ))}
-            <li>
-              <a className="nav__gh" href={REPO_URL} rel="noopener">GitHub ↗</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  )
-}
 
 function Hero() {
   return (
@@ -67,7 +20,7 @@ function Hero() {
             <a className="btn btn--primary" href={REPO_URL} rel="noopener">Explore the project</a>
             <a className="btn btn--ghost" href={ISSUES_URL} rel="noopener">Bring a real problem</a>
           </div>
-          <p className="fineprint">30 years of transaction experience. Self-funded. No VC. No token.</p>
+          <p className="fineprint">30 years of transaction experience. $8 billion in closed deals. Self-funded. No VC. No token.</p>
         </div>
         <div className="hero__art">
           <HeroIllustration />
@@ -205,7 +158,7 @@ function Founder() {
         </div>
         <div>
           <ul className="facts">
-            <li>30 years in commercial real estate transactions.</li>
+            <li>30 years in commercial real estate transactions, with $8 billion in closed deals.</li>
             <li>Prior leadership of a national industrial team.</li>
             <li>Self-funded, with an open-source direction.</li>
             <li>Built in collaboration with the community.</li>
@@ -237,23 +190,11 @@ function FinalCta() {
   )
 }
 
-function Footer() {
-  return (
-    <footer className="site-footer">
-      <div className="wrap site-footer__row">
-        <span>coldchainOS.org</span>
-        <a href={REPO_URL} rel="noopener">GitHub</a>
-        <span>An independent project in active development.</span>
-      </div>
-    </footer>
-  )
-}
-
 export default function App() {
   return (
     <div id="top">
       <a className="skip" href="#main">Skip to content</a>
-      <Header />
+      <Header home />
       <main id="main">
         <Hero />
         <Problem />
@@ -263,7 +204,7 @@ export default function App() {
         <Founder />
         <FinalCta />
       </main>
-      <Footer />
+      <Footer home />
     </div>
   )
 }
