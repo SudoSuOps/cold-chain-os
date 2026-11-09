@@ -11,7 +11,8 @@ for (const file of Object.keys(server.pages)) {
   const path = resolve('dist', file)
   let html = readFileSync(path, 'utf8')
   if (!html.includes('<div id="root"></div>')) throw new Error(`${file}: expected an empty #root to fill`)
-  html = html.replace('<div id="root"></div>', `<div id="root">${server.render(file)}</div>`)
+  // Cloudflare's Email Address Obfuscation rewrites addresses into '[email protected]' for crawlers; email_off opts the page out.
+  html = html.replace('<div id="root"></div>', `<!--email_off--><div id="root">${server.render(file)}</div><!--/email_off-->`)
   const ld = jsonLdFor(file)
   html = html.replace('</head>', `    <script type="application/ld+json">${JSON.stringify(ld)}</script>\n  </head>`)
   writeFileSync(path, html)

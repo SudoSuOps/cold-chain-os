@@ -54,15 +54,22 @@ for (const f of htmlFiles) {
     for (const p of ['og:title', 'og:description', 'og:url', 'og:image', 'og:image:alt', 'twitter:card']) {
       if (!new RegExp(`(property|name)="${p}"`).test(html)) fail(f, `missing ${p}`)
     }
+    const ogt = (html.match(/property="og:title" content="([^"]*)"/) ?? [])[1]
+    const twt = (html.match(/name="twitter:title" content="([^"]*)"/) ?? [])[1]
+    if (twt !== undefined && twt !== ogt) fail(f, `twitter:title "${twt}" != og:title "${ogt}"`)
     if ((html.match(/property="og:url" content="([^"]+)"/) ?? [])[1] !== expect) fail(f, 'og:url does not match canonical')
     if (!/name="robots" content="index,follow/.test(html)) fail(f, 'missing index,follow robots meta')
-  } else if (!/name="robots" content="noindex"/.test(html)) fail(f, '404 must be noindex')
+  } else {
+    if (!/name="robots" content="noindex"/.test(html)) fail(f, '404 must be noindex')
+    if (/name="twitter:title"/.test(html)) fail(f, '404 should not carry a page-specific twitter:title')
+  }
   // structured data
   const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
   if (ld.length !== 1) fail(f, `expected 1 JSON-LD block, found ${ld.length}`)
   else { try { JSON.parse(ld[0][1]) } catch { fail(f, 'JSON-LD is not valid JSON') } }
   // pre-rendered content present
-  const root = (html.match(/<div id="root">([\s\S]*)<\/div>\s*<\/body>/) ?? [])[1] ?? ''
+  const root = (html.match(/<div id="root">([\s\S]*)<\/div><!--\/email_off-->\s*<\/body>/) ?? [])[1] ?? ''
+  if (!html.includes('<!--email_off--><div id="root">')) fail(f, 'missing email_off markers (Cloudflare would obfuscate addresses for crawlers)')
   if (root.length < 1500) fail(f, `pre-rendered content too small (${root.length} chars); crawlers would see an empty page`)
   // exactly one h1, ordered headings
   const h1s = (body.match(/<h1[\s>]/g) ?? []).length
