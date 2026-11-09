@@ -238,7 +238,7 @@ export default function DatasetsPage() {
                   <li>{data.meta.origin}</li>
                   <li>{data.meta.selection}</li>
                   <li>The re-check recomputes revenue, vacancy loss and effective gross income from the rent roll in each question, and flags negative values. It doesn’t validate every line of every answer.</li>
-                  <li>No license has been chosen for these samples yet. Treat them as view-only until one is published in the repository.</li>
+                  <li>The site’s code and documentation are MIT-licensed, but these sample records are not covered by that license yet. Treat them as view-only until a license for them is published.</li>
                 </ul>
               </div>
             </section>

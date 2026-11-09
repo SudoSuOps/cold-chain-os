@@ -23,7 +23,7 @@
 - Name: coldchainOS (lowercase "coldchain", uppercase "OS", one word).
 - Funding: self-funded. No venture capital. No token.
 - Founder: 30 years of commercial real estate transaction experience and prior national industrial team leadership (founder-reported).
-- License: no open-source license has been chosen yet. Brand assets are not covered by any code license.
+- License: code, documentation and evaluation cases are MIT-licensed. Brand assets (name, wordmark, mark, Bull artwork) and the sample dataset records are not covered by that license.
 - Confidential uploads: the public site accepts none.
 - The sample dataset is model-generated, not extracted from real transactions.
 - The calculators are educational scenarios, not appraisals, engineering or investment advice.

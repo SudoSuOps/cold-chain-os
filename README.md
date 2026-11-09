@@ -38,7 +38,7 @@ npm run preview -- --host   # serve dist/ locally at http://localhost:4173
 
 - Per-page title, description, canonical, Open Graph and Twitter tags live in each page's `index.html`.
 - JSON-LD (Organization, WebSite, WebPage, BreadcrumbList; FAQPage on the home page) is generated from each page's own meta, so it cannot drift. The home-page FAQ is `src/faq.json`, used for both the visible text and the markup.
-- `public/llms.txt` summarizes the site for AI engines, with the facts that must not be misstated (no platform, no license yet, no uploads, model-generated sample data).
+- `public/llms.txt` summarizes the site for AI engines, with the facts that must not be misstated (no platform, MIT-licensed code, no uploads, model-generated sample data).
 - `public/sitemap.xml` has `lastmod`; update it when content changes. `public/robots.txt` allows all crawlers.
 - `public/_headers` sets a site-wide Content-Security-Policy and other security headers, long-lived caching for fingerprinted assets, and a stricter policy for `/deal-room/`. `404.html` is a real, noindexed page.
 
@@ -73,4 +73,15 @@ The site uses the coldchainOS brand kit v1.0 (kept outside the repo; the guide P
 ## Editing notes
 
 - **Links:** repo and Issues URLs live in `src/links.ts`.
-- **License:** none has been chosen yet. Add a `LICENSE` file once the owner decides.
+
+## License
+
+The code, documentation, evaluation schema and synthetic evaluation cases in this repository are released under the [MIT License](LICENSE).
+
+Not covered by the MIT License:
+
+- **Brand assets:** the coldchainOS name, wordmark, mark and Bull artwork (`public/brand/`, favicons, `public/icons/`, `public/og/`). See `public/brand/NOTICE.md`.
+- **Fonts:** Archivo and Inter are separate works under the SIL Open Font License 1.1 (`public/brand/fonts/`).
+- **Sample dataset:** the CRE sample records in `public/data/cre-samples.json` have no license chosen yet; treat them as view-only.
+- **Cited third-party sources:** quoted and linked material belongs to its publishers.
+

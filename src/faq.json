@@ -17,7 +17,7 @@
   },
   {
     "q": "Is it open source, and under what license?",
-    "a": "The code and documentation are in the public GitHub repository. No license has been chosen yet, and the brand assets are not covered by any code license."
+    "a": "The code and documentation are in the public GitHub repository under the MIT License. The brand assets (name, wordmark, mark and Bull artwork) and the sample dataset records are not covered by that license."
   },
   {
     "q": "Can I upload confidential documents to the site?",
