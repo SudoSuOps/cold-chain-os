@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Footer, Header } from './SiteChrome.tsx'
 import { ISSUES_URL, REPO_URL } from './links.ts'
+import samples from '../public/data/cre-samples.json'
 
 interface Msg { role: string; content: string }
 interface Check { line: string; stated: number; recomputed: number; ok: boolean }
@@ -74,7 +75,7 @@ function Recheck({ r }: { r: Rec }) {
   if (!r.recheck && !r.flags.length) return null
   return (
     <div className="recheck">
-      <h4>Re-check <span>recomputed here from the rent roll in the question</span></h4>
+      <h3>Re-check <span>recomputed here from the rent roll in the question</span></h3>
       {r.recheck && (
         <table>
           <thead><tr><th>Line</th><th>Stated</th><th>Recomputed</th><th><span className="sr">Result</span></th></tr></thead>
@@ -104,20 +105,13 @@ function Recheck({ r }: { r: Rec }) {
 }
 
 export default function DatasetsPage() {
-  const [data, setData] = useState<Data | null>(null)
-  const [err, setErr] = useState(false)
+  const data = samples as unknown as Data
   const [sel, setSel] = useState(0)
   const [tab, setTab] = useState<'qa' | 'json'>('qa')
   const [copied, setCopied] = useState(false)
 
-  useEffect(() => {
-    fetch('/data/cre-samples.json')
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then(setData)
-      .catch(() => setErr(true))
-  }, [])
 
-  const rec = data?.records[sel]
+  const rec = data.records[sel]
   const json = rec ? JSON.stringify(rec, null, 2) : ''
   const copy = async () => {
     try {
@@ -149,8 +143,6 @@ export default function DatasetsPage() {
           </div>
         </section>
 
-        {err && <section className="section"><div className="wrap"><p>Couldn’t load the sample data. Try reloading.</p></div></section>}
-        {!data && !err && <section className="section"><div className="wrap"><p>Loading samples…</p></div></section>}
 
         {data && rec && (
           <>

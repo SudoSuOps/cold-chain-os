@@ -1,0 +1,34 @@
+[
+  {
+    "q": "What is coldchainOS?",
+    "a": "coldchainOS is an independent, self-funded, open-source project in active development. It is building tools to connect source documents, operating evidence, transparent calculations and reviewable findings behind cold-storage decisions."
+  },
+  {
+    "q": "What does “Does the cold chain pencil?” mean?",
+    "a": "It asks whether the real estate, refrigeration equipment, energy costs and operating assumptions of a cold-storage decision actually add up, with the evidence and the math visible so people can check them."
+  },
+  {
+    "q": "Is there a finished platform?",
+    "a": "No. What exists today is this website, educational calculators, illustrative worked examples, a small sample dataset, draft evaluation cases and a local-only prototype. There are no customers, integrations, measured savings or certifications."
+  },
+  {
+    "q": "Who is behind it?",
+    "a": "A founder with 30 years of commercial real estate transaction experience and prior national industrial team leadership (founder-reported). The project has no venture capital and no token."
+  },
+  {
+    "q": "Is it open source, and under what license?",
+    "a": "The code and documentation are in the public GitHub repository. No license has been chosen yet, and the brand assets are not covered by any code license."
+  },
+  {
+    "q": "Can I upload confidential documents to the site?",
+    "a": "No. The public website accepts no uploads. The dev room is a local-only prototype that reads only file names in your browser and sends nothing anywhere."
+  },
+  {
+    "q": "Is the sample dataset real transaction data?",
+    "a": "No. The published CRE sample records are model-generated training data, not extracted from real transactions. Property and tenant names are synthetic."
+  },
+  {
+    "q": "How can I contribute?",
+    "a": "Explore the GitHub repository and open an issue with a real problem, field knowledge, a dataset or a correction."
+  }
+]

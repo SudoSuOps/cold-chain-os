@@ -23,9 +23,24 @@ npm run typecheck
 ## Production build
 
 ```bash
-npm run build      # typechecks, then writes static files to dist/
+npm run build      # typecheck, bundle, pre-render every page to static HTML, then audit dist/
 npm run preview -- --host   # serve dist/ locally at http://localhost:4173
 ```
+
+### What the build does
+
+1. `tsc --noEmit` and `vite build` produce the client bundle in `dist/`.
+2. `vite build --ssr` bundles the pages for Node (`dist-ssr/`, git-ignored).
+3. `scripts/prerender.mjs` renders each page to static HTML and injects JSON-LD (`scripts/seo.mjs`), so crawlers and AI engines that don't run JavaScript get the full content. The browser then hydrates the same markup.
+4. `scripts/audit.mjs` fails the build on: missing or duplicate titles and descriptions, wrong canonicals, missing Open Graph tags, invalid JSON-LD, empty pre-rendered content, heading or ARIA problems, images without alt text, broken internal links or anchors, and sitemap/robots/`llms.txt` mismatches. Run it alone with `npm run audit`.
+
+## SEO and GEO
+
+- Per-page title, description, canonical, Open Graph and Twitter tags live in each page's `index.html`.
+- JSON-LD (Organization, WebSite, WebPage, BreadcrumbList; FAQPage on the home page) is generated from each page's own meta, so it cannot drift. The home-page FAQ is `src/faq.json`, used for both the visible text and the markup.
+- `public/llms.txt` summarizes the site for AI engines, with the facts that must not be misstated (no platform, no license yet, no uploads, model-generated sample data).
+- `public/sitemap.xml` has `lastmod`; update it when content changes. `public/robots.txt` allows all crawlers.
+- `public/_headers` sets a site-wide Content-Security-Policy and other security headers, long-lived caching for fingerprinted assets, and a stricter policy for `/deal-room/`. `404.html` is a real, noindexed page.
 
 ## Static hosting (Cloudflare Pages)
 

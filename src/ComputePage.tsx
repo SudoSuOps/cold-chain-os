@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Footer, Header } from './SiteChrome.tsx'
 import { ISSUES_URL, REPO_URL } from './links.ts'
 
@@ -31,11 +31,11 @@ const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n
 const initialLoads = () => Array.from({ length: TOTAL }, (_, i) => 30 + ((i * 37) % 60))
 
 export default function ComputePage() {
-  const reduce = useMemo(
-    () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches,
-    [],
-  )
-  const [running, setRunning] = useState(!reduce)
+  // Start paused so server and client markup match; begin motion after mount unless the visitor prefers reduced motion.
+  const [running, setRunning] = useState(false)
+  useEffect(() => {
+    if (!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) setRunning(true)
+  }, [])
   const [loads, setLoads] = useState(initialLoads)
   const [queue, setQueue] = useState<number[]>([5, 4, 3, 2, 1])
   const [feed, setFeed] = useState<number[]>([0, 1, 2, 3])

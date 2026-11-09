@@ -1,3 +1,5 @@
+# coldchainOS.org
+# Search and AI crawlers are welcome. The site accepts no uploads and has no private content.
 User-agent: *
 Allow: /
 

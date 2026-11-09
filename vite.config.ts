@@ -14,6 +14,7 @@ export default defineConfig({
         why: resolve(__dirname, 'why/index.html'),
         'last-mile': resolve(__dirname, 'last-mile/index.html'),
         'new-era': resolve(__dirname, 'new-era/index.html'),
+        '404': resolve(__dirname, '404.html'),
         'deal-room': resolve(__dirname, 'deal-room/index.html'),
       },
     },

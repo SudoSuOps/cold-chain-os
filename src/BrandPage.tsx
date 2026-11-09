@@ -90,7 +90,7 @@ export default function BrandPage() {
             />
             <div>
               <p className="kicker">The Bull</p>
-              <h2>Storytelling, not decoration.</h2>
+              <h2 id="bull-h">Storytelling, not decoration.</h2>
               <p className="section__intro">
                 The Bull carries the large, narrative moments: heroes and social. The mark distils his horns and
                 aviators into flat geometry for navigation, favicons and small spaces. Use the supplied files; don’t

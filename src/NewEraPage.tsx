@@ -89,7 +89,7 @@ export default function NewEraPage() {
         {/* ECOSYSTEM */}
         <section className="section" id="ecosystem" aria-labelledby="eco-h">
           <div className="wrap">
-            <p className="kicker">The connected ecosystem</p>
+            <p className="kicker">The connected system</p>
             <h2 id="eco-h">Five layers. Information is not control.</h2>
             <div className="ne-split">
               <figure className="ne-fig"><EcosystemDiagram /><figcaption className="art-cap">Solid line: equipment-control authority. Dashed line: information flow. Illustrative, simplified.</figcaption></figure>

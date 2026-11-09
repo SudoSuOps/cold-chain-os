@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://coldchainOS.org/</loc>
-  </url>
-  <url>
-    <loc>https://coldchainOS.org/compute/</loc>
-  </url>
-  <url>
-    <loc>https://coldchainOS.org/datasets/</loc>
-  </url>
-  <url>
-    <loc>https://coldchainOS.org/brand/</loc>
+    <lastmod>2026-11-09</lastmod>
   </url>
   <url>
     <loc>https://coldchainOS.org/why/</loc>
-  </url>
-  <url>
-    <loc>https://coldchainOS.org/deal-room/</loc>
+    <lastmod>2026-11-09</lastmod>
   </url>
   <url>
     <loc>https://coldchainOS.org/last-mile/</loc>
+    <lastmod>2026-11-09</lastmod>
   </url>
   <url>
     <loc>https://coldchainOS.org/new-era/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://coldchainOS.org/datasets/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://coldchainOS.org/compute/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://coldchainOS.org/deal-room/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://coldchainOS.org/brand/</loc>
+    <lastmod>2026-11-09</lastmod>
   </url>
 </urlset>

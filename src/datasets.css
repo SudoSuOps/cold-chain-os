@@ -54,8 +54,8 @@
 .json { scrollbar-color: var(--ice-dim) var(--bg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 16px; max-height: 560px; overflow: auto; }
 
 .recheck { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 18px; }
-.recheck h4 { margin: 0 0 10px; font-size: 1rem; }
-.recheck h4 span { font-weight: 400; color: var(--muted); font-size: 0.82rem; margin-left: 8px; }
+.recheck h3 { margin: 0 0 10px; font-size: 1rem; }
+.recheck h3 span { font-weight: 400; color: var(--muted); font-size: 0.82rem; margin-left: 8px; }
 .recheck table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.85rem; }
 .recheck th, .recheck td { padding: 8px 6px; text-align: right; border-bottom: 1px solid var(--line); }
 .recheck th:first-child, .recheck td:first-child { text-align: left; }

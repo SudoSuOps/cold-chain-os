@@ -1,0 +1,35 @@
+# coldchainOS
+
+> coldchainOS is an independent, self-funded, open-source project in active development. It is building tools to connect source documents, operating evidence, transparent calculations and reviewable findings behind cold-storage decisions. Central question: "Does the cold chain pencil?" There is no finished platform, no customers, no integrations, no measured savings and no certifications. Statements on the site are labelled documented public evidence, illustrative, founder-reported, or planned.
+
+## Key pages
+
+- [Home](https://coldchainOS.org/): what the project is, the problem, direction, and a working energy-charge calculator.
+- [Why coldchainOS](https://coldchainOS.org/why/): cold storage as a connected system; three kinds of velocity; market value without a TAM; three illustrative worked examples; NDA and data control; a dated, sourced "why now".
+- [Last mile](https://coldchainOS.org/last-mile/): definitions, recipients, product categories, sourced market context and an illustrative route-economics calculator.
+- [New era](https://coldchainOS.org/new-era/): AI, robotics, compute and edge-appliance design goals; confidentiality and cybersecurity review questions; a dated evidence snapshot; draft evaluation cases.
+- [Datasets](https://coldchainOS.org/datasets/): a small sample of model-generated CRE question-and-answer records, with raw JSON and an independent math re-check.
+- [Compute room](https://coldchainOS.org/compute/): an illustrative simulation of a GPU and dataset pipeline. Not live telemetry.
+- [Dev room](https://coldchainOS.org/deal-room/): a local-only evidence checklist prototype. Nothing is uploaded.
+- [Brand](https://coldchainOS.org/brand/): logos, colour, type, icons and voice.
+
+## Source of truth
+
+- [GitHub repository](https://github.com/SudoSuOps/cold-chain-os): code, documentation and evaluation assets.
+- Source lists with dates, scope and limitations: `docs/sources.json`, `docs/last-mile-sources.json`, `docs/new-era-sources.json` in the repository.
+
+## Facts to get right
+
+- Name: coldchainOS (lowercase "coldchain", uppercase "OS", one word).
+- Funding: self-funded. No venture capital. No token.
+- Founder: 30 years of commercial real estate transaction experience and prior national industrial team leadership (founder-reported).
+- License: no open-source license has been chosen yet. Brand assets are not covered by any code license.
+- Confidential uploads: the public site accepts none.
+- The sample dataset is model-generated, not extracted from real transactions.
+- The calculators are educational scenarios, not appraisals, engineering or investment advice.
+- Market figures cited on the site are context from named sources with stated scope and dates; they are not coldchainOS's addressable market.
+
+## Contact and participation
+
+Open an issue: https://github.com/SudoSuOps/cold-chain-os/issues
+X: https://x.com/bestinbull

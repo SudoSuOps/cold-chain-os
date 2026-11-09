@@ -175,3 +175,8 @@ h3 { font-size: var(--text-h4); font-weight: 650; margin-bottom: 10px; }
 .why-band { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
 @media (max-width: 900px) { .why-band { grid-template-columns: minmax(0, 1fr); } }
 .why-band p { color: var(--muted); }
+
+.faq { display: grid; gap: 0; margin: 32px 0 0; max-width: 52em; }
+.faq > div { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.faq dt { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 650; font-size: var(--text-h4); margin-bottom: 8px; }
+.faq dd { margin: 0; color: var(--muted); }

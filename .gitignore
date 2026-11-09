@@ -12,3 +12,5 @@ npm-debug.log*
 # copied elsewhere, or present on a shared machine. See docs/nda-data-handling.md.
 private/
 deal-room-private/
+
+dist-ssr

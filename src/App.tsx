@@ -3,6 +3,7 @@ import HeroIllustration from './HeroIllustration.tsx'
 import Icon, { type IconName } from './Icon.tsx'
 import { Footer, Header } from './SiteChrome.tsx'
 import { ISSUES_URL, REPO_URL } from './links.ts'
+import faq from './faq.json'
 
 function Hero() {
   return (
@@ -255,6 +256,25 @@ function Founder() {
   )
 }
 
+function Faq() {
+  return (
+    <section className="section section--alt" id="faq" aria-labelledby="faq-h">
+      <div className="wrap">
+        <p className="kicker">Questions</p>
+        <h2 id="faq-h">Plain answers.</h2>
+        <dl className="faq">
+          {faq.map((f) => (
+            <div key={f.q}>
+              <dt>{f.q}</dt>
+              <dd>{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
+  )
+}
+
 function FinalCta() {
   return (
     <section className="final" aria-labelledby="final-h">
@@ -287,6 +307,7 @@ export default function App() {
         <Example />
         <FieldLab />
         <Founder />
+        <Faq />
         <FinalCta />
       </main>
       <Footer home />
