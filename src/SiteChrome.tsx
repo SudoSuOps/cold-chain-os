@@ -10,7 +10,7 @@ const NAV = [
 ] as const
 
 /** `home` = rendered on the landing page (in-page anchors); otherwise links point back to "/". */
-export function Header({ home = false }: { home?: boolean }) {
+export function Header({ home = false, page }: { home?: boolean; page?: 'compute' | 'datasets' }) {
   const [open, setOpen] = useState(false)
   const base = home ? '' : '/'
   useEffect(() => {
@@ -41,8 +41,13 @@ export function Header({ home = false }: { home?: boolean }) {
               </li>
             ))}
             <li>
-              <a href="/compute/" aria-current={home ? undefined : 'page'} className={home ? '' : 'nav__current'}>
+              <a href="/compute/" aria-current={page === 'compute' ? 'page' : undefined} className={page === 'compute' ? 'nav__current' : ''}>
                 Compute Room
+              </a>
+            </li>
+            <li>
+              <a href="/datasets/" aria-current={page === 'datasets' ? 'page' : undefined} className={page === 'datasets' ? 'nav__current' : ''}>
+                Datasets
               </a>
             </li>
             <li>

@@ -1,0 +1,540 @@
+{
+ "meta": {
+  "package": "bakery-cre",
+  "generated": "2026-10-14",
+  "source_rows": 810097,
+  "cre_rows": 711366,
+  "royal_jelly_rows": 558270,
+  "source_sha256": "770942e35d62581b22841fdc1a0a10d17252ce9243a02848a45df6079051c97f",
+  "buckets": [
+   [
+    "In-domain CRE",
+    706915
+   ],
+   [
+    "Eval split",
+    3539
+   ],
+   [
+    "Off-domain",
+    98731
+   ],
+   [
+    "Quarantined",
+    912
+   ]
+  ],
+  "categories": [
+   [
+    "Underwriting",
+    271094
+   ],
+   [
+    "Comp analysis",
+    102252
+   ],
+   [
+    "Valuation",
+    92990
+   ],
+   [
+    "Tax assessment",
+    74913
+   ],
+   [
+    "Rent roll",
+    56519
+   ],
+   [
+    "Debt analysis",
+    42190
+   ],
+   [
+    "Capital markets",
+    25818
+   ],
+   [
+    "New economy",
+    19911
+   ],
+   [
+    "1031 exchange",
+    18665
+   ]
+  ],
+  "gates": [
+   "length",
+   "json",
+   "concepts",
+   "numeric",
+   "degenerate",
+   "relevance"
+  ],
+  "origin": "Model-generated training data (lineage gen_model: various). Not extracted from real transactions.",
+  "selection": "Eval-split rows; cold-storage facilities; real company names excluded; score >= 89; one per city."
+ },
+ "records": [
+  {
+   "id": "HIVE-CRE-42528ff29d5d",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "42528ff29d5d87937a1090b338c68ff5",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Interchange Yards, a 93,000 SF cold storage facility in Airport, Salt Lake City.\n\nRent roll:\n- Patriot Packaging (Entire Building): 93,000 SF at $6.58/SF, modified_gross, cpi escalation, expires 2033-12-01\n\nVacancy: 7.7%\nExpenses (per SF): property tax $208,320, insurance $39,990, CAM $87,420, utilities $115,320, reserves $17,670\nManagement fee: 4.6% of EGI\nCap rate: 7.43%\n\nDebt: SBA 504 — $712,515 at 6.11%, 25-year amort, 0-year IO, 25-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $611,940\n  Vacancy loss (7.7%): $47,119\n  EGI: $564,821\n\nEXPENSES\n  Management fee: $25,982\n  Total OpEx: $494,702\n\nNOI: $70,119 ($0.75/SF)\n\nVALUATION\n  Cap rate: 7.43%\n  Value: $943,728\n  Price/SF: $10.15\n\nDEBT METRICS\n  Loan amount: $712,515\n  Annual debt service: $55,665\n  DSCR: 1.26x\n  Debt yield: 9.84%\n  LTV: 75.5%\n\nRETURNS\n  Equity: $231,213\n  Cash-on-cash: 6.25%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 611940,
+     "recomputed": 611940,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 47119,
+     "recomputed": 47119,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 564821,
+     "recomputed": 564821,
+     "ok": true
+    }
+   ],
+   "flags": []
+  },
+  {
+   "id": "HIVE-CRE-49cd2c87f5d1",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "49cd2c87f5d163877e3e23271ca77d79",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Industrial Commons, a 22,000 SF cold storage facility in Groveport, Columbus.\n\nRent roll:\n- Summit Logistics (Entire Building): 22,000 SF at $7.04/SF, gross, fixed escalation @ 3.5%, expires 2034-04-01\n\nVacancy: 6.8%\nExpenses (per SF): property tax $64,020, insurance $12,760, CAM $14,960, utilities $1,100, reserves $3,960\nManagement fee: 4.9% of EGI\nCap rate: 5.80%\n\nDebt: CMBS — $485,002 at 7.43%, 30-year amort, 2-year IO, 10-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $154,880\n  Vacancy loss (6.8%): $10,532\n  EGI: $144,348\n\nEXPENSES\n  Management fee: $7,073\n  Total OpEx: $103,873\n\nNOI: $40,475 ($1.84/SF)\n\nVALUATION\n  Cap rate: 5.80%\n  Value: $697,845\n  Price/SF: $31.72\n\nDEBT METRICS\n  Loan amount: $485,002\n  Annual debt service: $36,036\n  DSCR: 1.12x\n  Debt yield: 8.35%\n  LTV: 69.5%\n\nRETURNS\n  Equity: $212,843\n  Cash-on-cash: 2.09%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 154880,
+     "recomputed": 154880,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 10532,
+     "recomputed": 10532,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 144348,
+     "recomputed": 144348,
+     "ok": true
+    }
+   ],
+   "flags": []
+  },
+  {
+   "id": "HIVE-CRE-4f73e801d7a8",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "4f73e801d7a8ceadaadaf200901ef45c",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Parkway Crossing, a 136,000 SF cold storage facility in Airport, Tucson.\n\nRent roll:\n- Pacific Systems (Entire Building): 136,000 SF at $3.71/SF, modified_gross, fixed escalation @ 3.2%, expires 2026-01-01\n\nVacancy: 13.9%\nExpenses (per SF): property tax $349,520, insurance $53,040, CAM $153,680, utilities $32,640, reserves $21,760\nManagement fee: 5.9% of EGI\nCap rate: 9.24%\n\nDebt: CMBS — $-1,489,809 at 5.82%, 30-year amort, 2-year IO, 10-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $504,560\n  Vacancy loss (13.9%): $70,134\n  EGI: $434,426\n\nEXPENSES\n  Management fee: $25,631\n  Total OpEx: $636,271\n\nNOI: $-201,845 ($-1.48/SF)\n\nVALUATION\n  Cap rate: 9.24%\n  Value: $-2,184,470\n  Price/SF: $-16.06\n\nDEBT METRICS\n  Loan amount: $-1,489,809\n  Annual debt service: $0\n  DSCR: 0.00x\n  Debt yield: 0.00%\n  LTV: 0.0%\n\nRETURNS\n  Equity: $-694,661\n  Cash-on-cash: 0.00%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 504560,
+     "recomputed": 504560,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 70134,
+     "recomputed": 70134,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 434426,
+     "recomputed": 434426,
+     "ok": true
+    }
+   ],
+   "flags": [
+    "Negative NOI reported",
+    "Negative property value reported"
+   ]
+  },
+  {
+   "id": "HIVE-CRE-7897a2bfc836",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "7897a2bfc8367b6be50352369c52fb1a",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Valley Landing, a 82,000 SF cold storage facility in I-10 Corridor, Tucson.\n\nRent roll:\n- Continental Digital Infrastructure (Entire Building): 82,000 SF at $4.08/SF, NNN, flat escalation, expires 2034-02-01\n\nVacancy: 11.5%\nExpenses (per SF): property tax $272,240, insurance $60,680, CAM $43,460, utilities $5,740, reserves $18,860\nManagement fee: 3.3% of EGI\nCap rate: 8.68%\n\nDebt: Bridge Loan — $-993,411 at 8.68%, 0-year amort, 3-year IO, 3-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $334,560\n  Vacancy loss (11.5%): $38,474\n  EGI: $296,086\n\nEXPENSES\n  Management fee: $9,771\n  Total OpEx: $410,751\n\nNOI: $-114,665 ($-1.40/SF)\n\nVALUATION\n  Cap rate: 8.68%\n  Value: $-1,321,025\n  Price/SF: $-16.11\n\nDEBT METRICS\n  Loan amount: $-993,411\n  Annual debt service: $0\n  DSCR: 0.00x\n  Debt yield: 0.00%\n  LTV: 0.0%\n\nRETURNS\n  Equity: $-327,614\n  Cash-on-cash: 0.00%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 334560,
+     "recomputed": 334560,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 38474,
+     "recomputed": 38474,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 296086,
+     "recomputed": 296086,
+     "ok": true
+    }
+   ],
+   "flags": [
+    "Negative NOI reported",
+    "Negative property value reported"
+   ]
+  },
+  {
+   "id": "HIVE-CRE-7df97c4aedb4",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "7df97c4aedb4a9f5d106c65b861c35c4",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Parkway Center, a 147,000 SF cold storage facility in Decatur, Huntsville AL.\n\nRent roll:\n- Western Industries (Entire Building): 147,000 SF at $4.46/SF, gross, flat escalation, expires 2025-09-01\n\nVacancy: 12.1%\nExpenses (per SF): property tax $298,410, insurance $94,080, CAM $199,920, utilities $82,320, reserves $32,340\nManagement fee: 4.4% of EGI\nCap rate: 7.57%\n\nDebt: Bridge Loan — $-1,487,117 at 7.68%, 0-year amort, 3-year IO, 3-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $655,620\n  Vacancy loss (12.1%): $79,330\n  EGI: $576,290\n\nEXPENSES\n  Management fee: $25,357\n  Total OpEx: $732,427\n\nNOI: $-156,137 ($-1.06/SF)\n\nVALUATION\n  Cap rate: 7.57%\n  Value: $-2,062,576\n  Price/SF: $-14.03\n\nDEBT METRICS\n  Loan amount: $-1,487,117\n  Annual debt service: $0\n  DSCR: 0.00x\n  Debt yield: 0.00%\n  LTV: 0.0%\n\nRETURNS\n  Equity: $-575,459\n  Cash-on-cash: 0.00%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 655620,
+     "recomputed": 655620,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 79330,
+     "recomputed": 79330,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 576290,
+     "recomputed": 576290,
+     "ok": true
+    }
+   ],
+   "flags": [
+    "Negative NOI reported",
+    "Negative property value reported"
+   ]
+  },
+  {
+   "id": "HIVE-CRE-7f442db03d7b",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "7f442db03d7b5c399a0e84e448e6e4d6",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Digital Plaza, a 24,000 SF cold storage facility in Exit 8A, New York / New Jersey.\n\nRent roll:\n- family-owned distributor (Entire Building): 24,000 SF at $9.22/SF, modified_gross, fixed escalation @ 2.1%, expires 2039-01-01\n\nVacancy: 2.7%\nExpenses (per SF): property tax $72,960, insurance $9,360, CAM $15,600, utilities $31,440, reserves $6,000\nManagement fee: 5.8% of EGI\nCap rate: 8.58%\n\nDebt: Bridge Loan — $626,611 at 9.74%, 0-year amort, 3-year IO, 3-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $221,280\n  Vacancy loss (2.7%): $5,975\n  EGI: $215,305\n\nEXPENSES\n  Management fee: $12,488\n  Total OpEx: $147,848\n\nNOI: $67,457 ($2.81/SF)\n\nVALUATION\n  Cap rate: 8.58%\n  Value: $786,212\n  Price/SF: $32.76\n\nDEBT METRICS\n  Loan amount: $626,611\n  Annual debt service: $61,032\n  DSCR: 1.11x\n  Debt yield: 10.77%\n  LTV: 79.7%\n\nRETURNS\n  Equity: $159,601\n  Cash-on-cash: 4.03%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 221280,
+     "recomputed": 221280,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 5975,
+     "recomputed": 5975,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 215305,
+     "recomputed": 215305,
+     "ok": true
+    }
+   ],
+   "flags": []
+  },
+  {
+   "id": "HIVE-CRE-9dddd13d96de",
+   "category": "underwriting",
+   "grade": "genesis",
+   "prose": false,
+   "verification_score": 95,
+   "gates": {
+    "length": "short",
+    "json": "n/a",
+    "concepts": "rich",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "9dddd13d96de613a8ea089922e8647ec",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Perform a complete underwriting analysis for Enterprise Plaza, a 47,000 SF cold storage facility in I-35 Corridor, Dallas / Fort Worth.\n\nRent roll:\n- Western Products (Entire Building): 47,000 SF at $13.03/SF, NNN, cpi escalation, expires 2036-02-01\n\nVacancy: 3.1%\nExpenses (per SF): property tax $102,930, insurance $23,970, CAM $70,500, utilities $43,710, reserves $12,220\nManagement fee: 4.0% of EGI\nCap rate: 6.80%\n\nDebt: CMBS — $3,377,587 at 6.38%, 30-year amort, 2-year IO, 10-year term\n\nCalculate all metrics: PGI, EGI, NOI, value, price/SF, annual debt service, DSCR, debt yield, LTV, equity, and cash-on-cash return."
+    },
+    {
+     "role": "assistant",
+     "content": "REVENUE\n  PGI: $612,410\n  Vacancy loss (3.1%): $18,985\n  EGI: $593,425\n\nEXPENSES\n  Management fee: $23,737\n  Total OpEx: $277,067\n\nNOI: $316,358 ($6.73/SF)\n\nVALUATION\n  Cap rate: 6.80%\n  Value: $4,652,324\n  Price/SF: $98.99\n\nDEBT METRICS\n  Loan amount: $3,377,587\n  Annual debt service: $215,490\n  DSCR: 1.47x\n  Debt yield: 9.37%\n  LTV: 72.6%\n\nRETURNS\n  Equity: $1,274,737\n  Cash-on-cash: 7.91%"
+    }
+   ],
+   "recheck": [
+    {
+     "line": "PGI",
+     "stated": 612410,
+     "recomputed": 612410,
+     "ok": true
+    },
+    {
+     "line": "Vacancy loss",
+     "stated": 18985,
+     "recomputed": 18985,
+     "ok": true
+    },
+    {
+     "line": "EGI",
+     "stated": 593425,
+     "recomputed": 593425,
+     "ok": true
+    }
+   ],
+   "flags": []
+  },
+  {
+   "id": "HIVE-CRE-142ec8749d7f",
+   "category": "underwriting",
+   "grade": "honey",
+   "prose": true,
+   "verification_score": 90,
+   "gates": {
+    "length": "pass",
+    "json": "n/a",
+    "concepts": "basic",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "142ec8749d7fd2da31a2a07043897879",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Data Terminal is a 65,000 SF cold storage facility in Chandler/Gilbert, Phoenix. The property has the following tenants:\n- HVAC contractor: 19,000 SF at $9.08/SF\n- Delta Enterprises: 13,000 SF at $9.51/SF\n- Continental Group: 8,000 SF at $8.28/SF\n- Allied Freight: 4,000 SF at $7.10/SF\n- local printing company: 4,000 SF at $7.63/SF\n- Coastal Transport: 3,000 SF at $9.67/SF\n- family-owned distributor: 5,000 SF at $7.28/SF\n- national 3PL operator: 3,000 SF at $9.87/SF\n- construction materials yard: 2,000 SF at $7.68/SF\n- Falcon Systems: 4,000 SF at $8.77/SF\n\nCalculate the Potential Gross Income (PGI)."
+    },
+    {
+     "role": "assistant",
+     "content": "PGI = sum of all annual rents\n  HVAC contractor: 19,000 SF x $9.08/SF = $172,520\n  Delta Enterprises: 13,000 SF x $9.51/SF = $123,630\n  Continental Group: 8,000 SF x $8.28/SF = $66,240\n  Allied Freight: 4,000 SF x $7.10/SF = $28,400\n  local printing company: 4,000 SF x $7.63/SF = $30,520\n  Coastal Transport: 3,000 SF x $9.67/SF = $29,010\n  family-owned distributor: 5,000 SF x $7.28/SF = $36,400\n  national 3PL operator: 3,000 SF x $9.87/SF = $29,610\n  construction materials yard: 2,000 SF x $7.68/SF = $15,360\n  Falcon Systems: 4,000 SF x $8.77/SF = $35,080\n\nPGI = $566,770"
+    }
+   ],
+   "recheck": null,
+   "flags": []
+  },
+  {
+   "id": "HIVE-CRE-568157f0c0ef",
+   "category": "underwriting",
+   "grade": "honey",
+   "prose": true,
+   "verification_score": 90,
+   "gates": {
+    "length": "pass",
+    "json": "n/a",
+    "concepts": "basic",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "568157f0c0efe27178284747f0d5a445",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Commerce Commons is a 64,000 SF cold storage facility in South Tucson, Tucson. The property has the following tenants:\n- Atlantic Enterprises: 13,000 SF at $2.75/SF\n- drone fulfillment startup: 13,000 SF at $3.29/SF\n- Vanguard Services: 8,000 SF at $3.81/SF\n- EV fleet operator: 9,000 SF at $2.91/SF\n- National Group: 7,000 SF at $3.24/SF\n- Coastal Industries: 4,000 SF at $3.79/SF\n- National Enterprises: 1,000 SF at $3.74/SF\n- local printing company: 2,000 SF at $3.40/SF\n- HVAC contractor: 1,000 SF at $3.62/SF\n- EV fleet operator: 6,000 SF at $3.51/SF\n\nCalculate the Potential Gross Income (PGI)."
+    },
+    {
+     "role": "assistant",
+     "content": "PGI = sum of all annual rents\n  Atlantic Enterprises: 13,000 SF x $2.75/SF = $35,750\n  drone fulfillment startup: 13,000 SF x $3.29/SF = $42,770\n  Vanguard Services: 8,000 SF x $3.81/SF = $30,480\n  EV fleet operator: 9,000 SF x $2.91/SF = $26,190\n  National Group: 7,000 SF x $3.24/SF = $22,680\n  Coastal Industries: 4,000 SF x $3.79/SF = $15,160\n  National Enterprises: 1,000 SF x $3.74/SF = $3,740\n  local printing company: 2,000 SF x $3.40/SF = $6,800\n  HVAC contractor: 1,000 SF x $3.62/SF = $3,620\n  EV fleet operator: 6,000 SF x $3.51/SF = $21,060\n\nPGI = $208,250"
+    }
+   ],
+   "recheck": null,
+   "flags": []
+  },
+  {
+   "id": "HIVE-CRE-c60052422179",
+   "category": "underwriting",
+   "grade": "honey",
+   "prose": true,
+   "verification_score": 90,
+   "gates": {
+    "length": "pass",
+    "json": "n/a",
+    "concepts": "basic",
+    "numeric": "rich",
+    "degenerate": "pass",
+    "relevance": "high"
+   },
+   "fingerprint": "c6005242217996daf1395d8ccab7cab2",
+   "messages": [
+    {
+     "role": "system",
+     "content": "You are SwarmCRE. Perform the requested underwriting calculation. Show all steps. Round money to the nearest dollar, ratios to 2 decimal places. For data center deals, account for power costs ($/kWh), PUE, and per-MW economics. When economic incentives apply (TIF, abatements, OZ), model their impact on returns. For 1031 exchange calculations, track adjusted basis, deferred gain, boot, and new basis. For tax analysis, apply correct depreciation schedules (39-year commercial, cost segregation), capital gains rates (20% LTCG + 3.8% NIIT + 25% Section 1250 recapture), and entity-level impacts. State assumptions explicitly."
+    },
+    {
+     "role": "user",
+     "content": "Valley Terminal is a 84,000 SF cold storage facility in Alliance, Dallas / Fort Worth. The property has the following tenants:\n- national HVAC distributor: 33,000 SF at $11.89/SF\n- Metro Packaging: 9,000 SF at $10.99/SF\n- new logistics company: 15,000 SF at $9.58/SF\n- Southern Systems: 10,000 SF at $15.49/SF\n- local printing company: 6,000 SF at $11.68/SF\n- family-owned distributor: 4,000 SF at $10.64/SF\n- regional food distributor: 2,000 SF at $16.08/SF\n- Pacific Corp: 1,000 SF at $13.27/SF\n- Western Packaging: 4,000 SF at $11.10/SF\n\nCalculate the Potential Gross Income (PGI)."
+    },
+    {
+     "role": "assistant",
+     "content": "PGI = sum of all annual rents\n  national HVAC distributor: 33,000 SF x $11.89/SF = $392,370\n  Metro Packaging: 9,000 SF x $10.99/SF = $98,910\n  new logistics company: 15,000 SF x $9.58/SF = $143,700\n  Southern Systems: 10,000 SF x $15.49/SF = $154,900\n  local printing company: 6,000 SF x $11.68/SF = $70,080\n  family-owned distributor: 4,000 SF x $10.64/SF = $42,560\n  regional food distributor: 2,000 SF x $16.08/SF = $32,160\n  Pacific Corp: 1,000 SF x $13.27/SF = $13,270\n  Western Packaging: 4,000 SF x $11.10/SF = $44,400\n\nPGI = $992,350"
+    }
+   ],
+   "recheck": null,
+   "flags": []
+  }
+ ]
+}

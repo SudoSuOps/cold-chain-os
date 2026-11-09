@@ -57,7 +57,7 @@ export default function ComputePage() {
   return (
     <div id="top" className="cr">
       <a className="skip" href="#main">Skip to content</a>
-      <Header />
+      <Header page="compute" />
       <main id="main">
         <section className="cr-hero" aria-labelledby="cr-h">
           <div className="wrap">
@@ -175,7 +175,7 @@ export default function ComputePage() {
               <h2 id="honest-h">Direction, not a deployed datacenter.</h2>
             </div>
             <ul className="facts">
-              <li>No released datasets yet. This page shows the shape of the work, not its output.</li>
+              <li>The GPU motion on this page is a schematic. A small, real, re-checked sample of the dataset output is on the <a href="/datasets/">Datasets page</a>.</li>
               <li>The motion above is simulated. The rows are made-up examples of what a check looks like.</li>
               <li>We’ll publish real datasets, methods and evaluation results in the open repository as they hold up.</li>
             </ul>
