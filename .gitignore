@@ -14,3 +14,8 @@ private/
 deal-room-private/
 
 dist-ssr
+
+# Local secrets
+.dev.vars
+.env
+.env.*

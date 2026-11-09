@@ -1,0 +1,20 @@
+.ct-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+@media (max-width: 900px) { .ct-split { grid-template-columns: minmax(0, 1fr); } }
+.ct-card { padding: clamp(18px, 3.5vw, 32px); border-color: var(--ice-dim); }
+.cf { display: grid; gap: 18px; }
+.cf__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 560px) { .cf__grid { grid-template-columns: minmax(0, 1fr); } }
+.cf textarea, .cf select { width: 100%; font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--ice-dim); border-radius: 4px; padding: 10px 14px; min-height: 48px; }
+.cf textarea { resize: vertical; line-height: 1.5; }
+.cf [aria-invalid='true'] { border-color: var(--err); }
+.cf__opt { color: var(--muted); font-size: 0.85em; }
+.cf__actions { display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; }
+.cf__actions .btn { cursor: pointer; font: inherit; font-weight: 600; }
+.cf__actions .btn:disabled { opacity: 0.6; cursor: progress; }
+.cf__status { color: var(--muted); font-size: var(--text-small); min-height: 1.4em; flex: 1 1 220px; }
+.cf__status--err { color: var(--err); }
+.cf--done { display: grid; gap: 12px; }
+.cf--done h3 { margin: 0; }
+.cf--done p { margin: 0; color: var(--muted); }
+.cf--done .btn { justify-self: start; cursor: pointer; font: inherit; font-weight: 600; background: transparent; }
+.hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }

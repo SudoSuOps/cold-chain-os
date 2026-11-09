@@ -48,7 +48,7 @@ Any static host works. For Cloudflare Pages: build command `npm run build`, outp
 
 ## Pages
 
-`/` landing · `/why/` the story, sourced context and worked examples · `/last-mile/` last-mile context, route-economics calculator and sources · `/new-era/` AI, robotics, compute, edge-appliance design goals, security review questions and a dated source snapshot · `/compute/` compute-room schematic · `/datasets/` CRE sample records · `/deal-room/` local-only evidence checklist (no uploads) · `/brand/` brand kit.
+`/` landing · `/why/` the story, sourced context and worked examples · `/last-mile/` last-mile context, route-economics calculator and sources · `/new-era/` AI, robotics, compute, edge-appliance design goals, security review questions and a dated source snapshot · `/compute/` compute-room schematic · `/datasets/` CRE sample records · `/deal-room/` local-only evidence checklist (no uploads) · `/contact/` contact form (Pages Function + Resend) · `/brand/` brand kit.
 
 Docs: `docs/why-coldchainos.md`, `market-context.md`, `nda-data-handling.md`, `illustrative-examples.md`, `sources.json`, `last-mile.md`, `last-mile-sources.json`, `new-era.md`, `edge-appliance-architecture.md`, `security-and-confidentiality.md`, `dataset-methodology.md`, `new-era-sources.json` (every sourced claim, rendered on `/why/`). Example arithmetic lives in `src/whyCalc.ts` with tests in `src/why.test.ts`.
 
@@ -87,4 +87,4 @@ Not covered by the MIT License:
 
 ## Contact
 
-build@swarmandbee.ai, or open a GitHub issue. Please do not email confidential documents; there is no secured channel for them.
+Use the form at `/contact/`, email build@swarmandbee.ai, or open a GitHub issue. Please do not send confidential documents; there is no secured channel for them. The form is a Cloudflare Pages Function that sends branded email through Resend. Setup, secrets and the abuse model are in `docs/contact-form.md`.

@@ -8,6 +8,7 @@ import WhyPage from './WhyPage.tsx'
 import DealRoomPage from './DealRoomPage.tsx'
 import LastMilePage from './LastMilePage.tsx'
 import NewEraPage from './NewEraPage.tsx'
+import ContactPage from './ContactPage.tsx'
 import NotFoundPage from './NotFoundPage.tsx'
 
 /** Output file (relative to dist/) -> page component. Used only by scripts/prerender.mjs at build time. */
@@ -20,6 +21,7 @@ export const pages: Record<string, ComponentType> = {
   'deal-room/index.html': DealRoomPage,
   'last-mile/index.html': LastMilePage,
   'new-era/index.html': NewEraPage,
+  'contact/index.html': ContactPage,
   '404.html': NotFoundPage,
 }
 

@@ -8,7 +8,7 @@
     "build": "tsc --noEmit && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs && node scripts/audit.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test src/calc.test.ts src/why.test.ts src/lastmile.test.ts src/newera-cases.test.ts",
+    "test": "node --experimental-strip-types --test src/calc.test.ts src/why.test.ts src/lastmile.test.ts src/newera-cases.test.ts src/contact.test.ts",
     "audit": "node scripts/audit.mjs"
   },
   "dependencies": {

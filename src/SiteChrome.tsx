@@ -10,7 +10,7 @@ const NAV = [
 ] as const
 
 /** `home` = rendered on the landing page (in-page anchors); otherwise links point back to "/". */
-export function Header({ home = false, page }: { home?: boolean; page?: 'compute' | 'datasets' | 'why' | 'deal-room' | 'last-mile' | 'new-era' }) {
+export function Header({ home = false, page }: { home?: boolean; page?: 'compute' | 'datasets' | 'why' | 'deal-room' | 'last-mile' | 'new-era' | 'contact' }) {
   const [open, setOpen] = useState(false)
   const base = home ? '' : '/'
   useEffect(() => {
@@ -73,6 +73,7 @@ export function Footer({ home = false }: { home?: boolean }) {
         <a href="/why/">Why</a>
         <a href="/last-mile/">Last mile</a>
         <a href="/new-era/">New era</a>
+        <a href="/contact/">Contact</a>
         <a href="/deal-room/">Dev room</a>
         <a href="/brand/">Brand</a>
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>

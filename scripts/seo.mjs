@@ -29,7 +29,7 @@ export function jsonLdFor(file, html = readFileSync(resolve('dist', file), 'utf8
   const site = { '@type': 'WebSite', '@id': `${SITE}/#site`, url: `${SITE}/`, name: 'coldchainOS', publisher: { '@id': `${SITE}/#org` }, copyrightHolder: { '@type': 'Organization', name: 'Swarm & Bee LLC' }, inLanguage: 'en-US' }
   const graph = [org, site]
   if (file === '404.html') return { '@context': 'https://schema.org', '@graph': graph }
-  const page = { '@type': 'WebPage', '@id': `${url}#page`, url, name, description, isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#org` }, inLanguage: 'en-US' }
+  const page = { '@type': file === 'contact/index.html' ? 'ContactPage' : 'WebPage', '@id': `${url}#page`, url, name, description, isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#org` }, inLanguage: 'en-US' }
   graph.push(page)
   if (file !== 'index.html') {
     graph.push({

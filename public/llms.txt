@@ -11,6 +11,7 @@
 - [Datasets](https://coldchainos.org/datasets/): a small sample of model-generated CRE question-and-answer records, with raw JSON and an independent math re-check.
 - [Compute room](https://coldchainos.org/compute/): an illustrative simulation of a GPU and dataset pipeline. Not live telemetry.
 - [Dev room](https://coldchainos.org/deal-room/): a local-only evidence checklist prototype. Nothing is uploaded.
+- [Contact](https://coldchainos.org/contact/): a contact form (plain email; no attachments; please send nothing confidential).
 - [Brand](https://coldchainos.org/brand/): logos, colour, type, icons and voice.
 
 ## Source of truth
@@ -32,6 +33,7 @@
 
 ## Contact and participation
 
+Contact form: https://coldchainos.org/contact/
 Email: build@swarmandbee.ai (do not send confidential documents; there is no secured channel)
 Open an issue: https://github.com/SudoSuOps/cold-chain-os/issues
 X: https://x.com/bestinbull
