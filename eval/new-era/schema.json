@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://coldchainOS.org/eval/new-era/schema.json",
+  "title": "coldchainOS New Era evaluation case",
+  "description": "One synthetic evaluation case. Labels are drafts until reviewed; a generated label is not verified ground truth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id", "domain", "scenario_type", "source_references", "observation_date", "facts_supplied", "facts_missing",
+    "question", "expected_answer", "answer_type", "calculation", "acceptable_uncertainty", "unsupported_claims_to_reject",
+    "reason_to_abstain", "evidence_required", "safe_next_review_step", "testability", "review_owner",
+    "label_status", "version", "split", "source_family"
+  ],
+  "properties": {
+    "case_id": { "type": "string", "pattern": "^NE-[0-9]{3}$" },
+    "domain": { "type": "string", "enum": ["equipment-documents", "energy", "operations-continuity", "confidentiality", "security-review", "source-reliability", "telemetry", "automation"] },
+    "scenario_type": { "type": "string", "minLength": 3 },
+    "source_references": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "kind", "rights"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "enum": ["synthetic", "public"] },
+          "rights": { "type": "string", "minLength": 3 },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "observation_date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "facts_supplied": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } },
+    "facts_missing": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } },
+    "question": { "type": "string", "minLength": 10 },
+    "expected_answer": { "type": "string", "minLength": 10 },
+    "answer_type": { "type": "string", "enum": ["computed", "abstain", "qualified", "reject_instruction"] },
+    "calculation": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["kind", "formula", "inputs", "result", "unit"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["product", "min"] },
+        "formula": { "type": "string", "minLength": 3 },
+        "inputs": { "type": "object" },
+        "result": { "type": "number" },
+        "unit": { "type": "string", "minLength": 1 }
+      }
+    },
+    "acceptable_uncertainty": { "type": "string", "minLength": 3 },
+    "unsupported_claims_to_reject": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } },
+    "reason_to_abstain": { "type": "string", "minLength": 3 },
+    "evidence_required": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } },
+    "safe_next_review_step": { "type": "string", "minLength": 10 },
+    "testability": { "type": "string", "enum": ["mechanical", "expert_review"] },
+    "review_owner": { "type": "string", "minLength": 3 },
+    "label_status": { "type": "string", "enum": ["draft_unreviewed", "expert_reviewed"] },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "split": { "type": "string", "enum": ["train", "dev", "heldout"] },
+    "source_family": { "type": "string", "minLength": 3 }
+  }
+}

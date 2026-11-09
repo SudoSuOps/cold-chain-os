@@ -1,0 +1,45 @@
+{
+  "checked": "2026-11-09",
+  "note": "Sources for the /last-mile page. 'limitations' states what each figure is not. Re-check before relying on any number.",
+  "sources": [
+    {
+      "id": "bmc-3q26",
+      "claim": "U.S. online grocery sales rose 20.7% year over year in 3Q26. Delivery grew more than 30% and drove about three-quarters of the topline increase. Average order frequency among monthly active online grocery shoppers rose nearly 14% in the quarter.",
+      "publisher": "Brick Meets Click",
+      "title": "U.S. eGrocery Sales for 3Q26 Climb 21% Versus Last Year",
+      "url": "https://www.brickmeetsclick.com/presses/u-s-egrocery-sales-for-3q26-climb-21-versus-last-year",
+      "published": "2026-10-15",
+      "data_period": "3Q26 (monthly surveys in July, August and September 2026)",
+      "geographic_scope": "United States",
+      "measurement": "Survey-based estimates from the Brick Meets Click Grocery Shopper Surveys: adults 18+ who take part in household grocery shopping, adjusted for internet usage, weighted by age and income to Census adult population figures. Delivery means orders from a first- or third-party provider; pickup; and ship-to-home via a common carrier.",
+      "date_checked": "2026-11-09",
+      "limitations": "Survey-based grocery-sales estimates across fulfillment methods, not cold-chain logistics revenue, not a software market size, and not a count of refrigerated shipments. The page states no sample size or product-category coverage, and no total dollar amount for the quarter. 'Delivery' includes any grocery delivery, not only refrigerated or frozen items."
+    },
+    {
+      "id": "bmc-sept26",
+      "claim": "Monthly U.S. online grocery sales grew just over 16% year over year in September 2026. Average order frequency rose 9.0% year over year, and sub-same-day orders (within three hours of order placement) were about two-thirds of Delivery orders that month.",
+      "publisher": "Brick Meets Click",
+      "title": "Sept 2026: eGrocery sales up just over 16% year-over-year",
+      "url": "https://www.brickmeetsclick.com/insights/sept-2026-egrocery-sales-up-just-over-16-year-over-year",
+      "published": "2026-10-21",
+      "data_period": "September 2026 (survey fielded Sept 28 to 30, 2026)",
+      "geographic_scope": "United States",
+      "measurement": "Brick Meets Click Grocery Shopping Survey. Order frequency is a year-over-year change in average orders per monthly active user. Average order value across delivery, pickup and ship-to-home was up 3.6% nominal; Delivery AOV fell 2.5%.",
+      "date_checked": "2026-11-09",
+      "limitations": "A single month and a different period from the 3Q26 release, so its growth and order-frequency figures are not comparable to the quarterly ones. No dollar total, sample size or delivery/pickup order mix is given. Same grocery-wide scope as above, not refrigerated-only."
+    },
+    {
+      "id": "fda-online-delivery",
+      "claim": "FDA, with USDA and CDC, highlighted best practices on food safety for third-party delivery services, covering mitigating measures for vulnerabilities including those that may arise in the 'last mile' of delivery, with topics including packaging, temperature control, contamination control and allergen control.",
+      "publisher": "U.S. Food and Drug Administration",
+      "title": "FDA Highlights Best Practices on Food Safety for Online Delivery Services",
+      "url": "https://www.fda.gov/food/hfp-constituent-updates/fda-highlights-best-practices-food-safety-online-delivery-services",
+      "published": "2022-12-09 (content current as of 12/09/2022)",
+      "data_period": "Not a data series",
+      "geographic_scope": "United States",
+      "measurement": "Guidance announcement (constituent update). It points to a Conference for Food Protection document; we have not read that document and have not verified its formal title.",
+      "date_checked": "2026-11-09",
+      "limitations": "The page frames the content as recommendations and best practices, not a legal requirement, and does not list the individual recommendations or specific temperature or time limits. It addresses food, not pharmaceuticals. It is dated 2022; check for newer guidance."
+    }
+  ]
+}

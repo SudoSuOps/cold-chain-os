@@ -28,6 +28,83 @@ function Hero() {
   )
 }
 
+function Why() {
+  return (
+    <section className="section section--alt" id="why" aria-labelledby="why-h">
+      <div className="wrap why-band">
+        <div>
+          <p className="kicker">Why coldchainOS</p>
+          <h2 id="why-h">The product has a clock.</h2>
+          <p className="section__intro">
+            The building has a power bill. The deal has assumptions. Connect them.
+          </p>
+        </div>
+        <div>
+          <p>
+            A cold-storage facility is a building, a refrigeration system, an electrical load and a capital
+            decision, at once. The offering memorandum, the utility bill, the service file and the lease each tell
+            part of the story, and they can disagree. We’re building open tools to make the source visible, make
+            missing information explicit, and make the math reproducible, with accountable people making the call.
+          </p>
+          <div className="cta-row">
+            <a className="btn btn--primary" href="/why/">Read the full story</a>
+            <a className="btn btn--ghost" href="/deal-room/">Try the dev room</a>
+          </div>
+          <p className="fineprint">The dev room is a local-only prototype. Nothing you choose is uploaded.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LastMileTeaser() {
+  return (
+    <section className="section" id="last-mile" aria-labelledby="lm-t-h">
+      <div className="wrap why-band">
+        <div>
+          <p className="kicker">Last mile</p>
+          <h2 id="lm-t-h">The cold chain ends at the handoff.</h2>
+        </div>
+        <div>
+          <p>
+            A warehouse can hold the product. The last mile has to deliver it, on time, in the required condition, at a
+            cost the operation can support. We’re mapping how the local node, the route and the operating math fit
+            together, with sourced context and a small route-economics calculator.
+          </p>
+          <div className="cta-row">
+            <a className="btn btn--primary" href="/last-mile/">Explore the last mile</a>
+          </div>
+          <p className="fineprint">Context and planned work. coldchainOS does not operate deliveries.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function NewEraTeaser() {
+  return (
+    <section className="section section--alt" id="new-era" aria-labelledby="ne-t-h">
+      <div className="wrap why-band">
+        <div>
+          <p className="kicker">New era</p>
+          <h2 id="ne-t-h">The cold chain is becoming a connected machine.</h2>
+        </div>
+        <div>
+          <p>
+            Robotics, software, compute and electricity now depend on each other. We’re investigating those
+            dependencies, how confidential records should be handled, and the datasets and evaluations that
+            would help people spot gaps. We’re not a deployed security product or a refrigeration controller.
+          </p>
+          <div className="cta-row">
+            <a className="btn btn--primary" href="/new-era/">Explore the new era</a>
+          </div>
+          <p className="fineprint">Investigation and planned work, with a dated source snapshot.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Problem() {
   const items: [IconName, string, string][] = [
     ['cold-storage-facility', 'The building', 'Usable space, insulation, layout, loading, and condition.'],
@@ -202,6 +279,9 @@ export default function App() {
       <Header home />
       <main id="main">
         <Hero />
+        <Why />
+        <LastMileTeaser />
+        <NewEraTeaser />
         <Problem />
         <Building />
         <Example />

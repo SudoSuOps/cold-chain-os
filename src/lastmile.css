@@ -1,0 +1,17 @@
+.steps--5 { grid-template-columns: repeat(5, 1fr); margin-top: 20px; }
+.steps--5 li:not(:last-child)::after { content: none; }
+.steps--5 li { align-items: flex-start; }
+@media (max-width: 1000px) { .steps--5 { grid-template-columns: 1fr; } }
+.lm-who { width: 100%; border-collapse: collapse; margin-top: 32px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.lm-who th, .lm-who td { text-align: left; vertical-align: top; padding: 16px 18px; border-bottom: 1px solid var(--line); font-size: var(--text-small); }
+.lm-who thead th { color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; background: var(--bg); }
+.lm-who tbody th { font-weight: 600; color: var(--text); width: 24%; }
+.lm-who td { color: var(--muted); }
+.lm-who tbody tr:last-child > * { border-bottom: 0; }
+@media (max-width: 760px) {
+  .lm-who, .lm-who tbody, .lm-who tr, .lm-who th, .lm-who td { display: block; width: auto !important; }
+  .lm-who thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .lm-who tr { border-bottom: 1px solid var(--line); padding: 8px 0; }
+  .lm-who th, .lm-who td { border: 0; padding: 6px 16px; }
+  .lm-who td::before { content: attr(data-label); display: block; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ice); margin-bottom: 2px; }
+}

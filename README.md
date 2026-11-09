@@ -31,6 +31,18 @@ npm run preview -- --host   # serve dist/ locally at http://localhost:4173
 
 Any static host works. For Cloudflare Pages: build command `npm run build`, output directory `dist`, Node 18+. No environment variables are needed. DNS and deployment are intentionally not configured here.
 
+## Pages
+
+`/` landing · `/why/` the story, sourced context and worked examples · `/last-mile/` last-mile context, route-economics calculator and sources · `/new-era/` AI, robotics, compute, edge-appliance design goals, security review questions and a dated source snapshot · `/compute/` compute-room schematic · `/datasets/` CRE sample records · `/deal-room/` local-only evidence checklist (no uploads) · `/brand/` brand kit.
+
+Docs: `docs/why-coldchainos.md`, `market-context.md`, `nda-data-handling.md`, `illustrative-examples.md`, `sources.json`, `last-mile.md`, `last-mile-sources.json`, `new-era.md`, `edge-appliance-architecture.md`, `security-and-confidentiality.md`, `dataset-methodology.md`, `new-era-sources.json` (every sourced claim, rendered on `/why/`). Example arithmetic lives in `src/whyCalc.ts` with tests in `src/why.test.ts`.
+
+`public/_headers` applies a strict Content-Security-Policy (`connect-src 'none'`) to `/deal-room/` on Cloudflare Pages. It is not applied by `npm run preview`.
+
+## Evaluation assets
+
+`eval/new-era/` holds a JSON schema, 12 synthetic draft cases (all `draft_unreviewed`; two need expert review) and a dependency-free validator. `npm test` checks schema validity, deterministic recomputation of calculations, split leakage by source family, and that no label claims expert review.
+
 ## Brand
 
 The site uses the coldchainOS brand kit v1.0 (kept outside the repo; the guide PDF and source portrait are not committed).

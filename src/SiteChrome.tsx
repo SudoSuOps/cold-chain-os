@@ -10,7 +10,7 @@ const NAV = [
 ] as const
 
 /** `home` = rendered on the landing page (in-page anchors); otherwise links point back to "/". */
-export function Header({ home = false, page }: { home?: boolean; page?: 'compute' | 'datasets' }) {
+export function Header({ home = false, page }: { home?: boolean; page?: 'compute' | 'datasets' | 'why' | 'deal-room' | 'last-mile' | 'new-era' }) {
   const [open, setOpen] = useState(false)
   const base = home ? '' : '/'
   useEffect(() => {
@@ -35,6 +35,9 @@ export function Header({ home = false, page }: { home?: boolean; page?: 'compute
         </button>
         <nav id="site-nav" className="nav" data-open={open} aria-label="Primary">
           <ul>
+            <li>
+              <a href="/why/" aria-current={page === 'why' ? 'page' : undefined} className={page === 'why' ? 'nav__current' : ''}>Why</a>
+            </li>
             {NAV.map(([id, label]) => (
               <li key={id}>
                 <a href={`${base}#${id}`} onClick={() => setOpen(false)}>{label}</a>
@@ -67,6 +70,10 @@ export function Footer({ home = false }: { home?: boolean }) {
         <a href={home ? '#top' : '/'}>coldchainOS.org</a>
         <a href={REPO_URL} rel="noopener">GitHub</a>
         <a href={X_URL} rel="noopener">X @bestinbull</a>
+        <a href="/why/">Why</a>
+        <a href="/last-mile/">Last mile</a>
+        <a href="/new-era/">New era</a>
+        <a href="/deal-room/">Dev room</a>
         <a href="/brand/">Brand</a>
         <span>An independent project in active development.</span>
       </div>

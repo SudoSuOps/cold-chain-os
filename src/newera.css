@@ -1,0 +1,35 @@
+.ne-split { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin: 32px 0; }
+@media (max-width: 900px) { .ne-split { grid-template-columns: minmax(0, 1fr); } }
+.ne-fig { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: clamp(8px, 2vw, 20px); }
+.ne-fig--wide { margin: 28px 0; }
+.ne-layers { display: grid; gap: 12px; color: var(--muted); }
+.ne-layers b { color: var(--text); }
+.diagram { display: block; width: 100%; max-width: 560px; height: auto; margin-inline: auto; }
+.dg-box { fill: var(--bg); stroke: var(--ice-dim); stroke-width: 1.2; }
+.dg-title { fill: var(--text); font-family: var(--font-display); font-weight: 700; font-size: 17px; }
+.dg-sub { fill: var(--muted); font-family: var(--font-body); font-size: 14px; }
+.dg-sub--lg { fill: var(--text); font-size: 16px; }
+.dg-label { fill: var(--ice); font-family: var(--font-body); font-size: 14px; }
+.dg-label--bad { fill: var(--hot); }
+.dg-label--dim { fill: var(--muted); }
+.dg-solid { stroke: var(--ice); stroke-width: 2.5; }
+.dg-dash { stroke: var(--ice); stroke-width: 2; stroke-dasharray: 7 6; }
+.dg-arrow { stroke: var(--ice); stroke-width: 2.5; stroke-linecap: round; }
+.dg-bad { stroke: var(--hot); stroke-width: 3; stroke-linecap: round; }
+.dg-zone { fill: rgb(13 31 58 / 0.55); stroke-width: 1.5; stroke-dasharray: 3 4; }
+.dg-zone--own { stroke: var(--ccos-success); }
+.dg-zone--ot { stroke: var(--warm); }
+.dg-zone--ext { stroke: var(--ccos-platinum); }
+.dg-zonelabel { fill: var(--text); font-family: var(--font-body); font-weight: 600; font-size: 14px; letter-spacing: 0.04em; }
+.ev-list { display: grid; gap: 16px; margin-top: 32px; }
+.ev header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 14px; }
+.ev header h3 { margin: 0; font-size: var(--text-h4); }
+.ev dl, .review dl { margin: 0; display: grid; gap: 8px; font-size: var(--text-small); }
+.ev dl > div, .review dl > div { display: grid; grid-template-columns: 190px 1fr; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.ev dt, .review dt { color: var(--muted); }
+.ev dd, .review dd { margin: 0; color: var(--text); }
+.ev__q dt { color: var(--ice) !important; font-weight: 600; }
+@media (max-width: 640px) { .ev dl > div, .review dl > div { grid-template-columns: 1fr; gap: 2px; } }
+.review { border-color: var(--warm); }
+.cases tbody th { width: 12%; }
+.lm-who td b { color: var(--text); }

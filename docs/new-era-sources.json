@@ -1,0 +1,90 @@
+{
+  "checked": "2026-11-09",
+  "note": "A clearly dated research snapshot for /new-era/. It is not an automatically updating feed. 'verification' states how each source was checked.",
+  "sources": [
+    {
+      "id": "cisa-plc-update-jul22",
+      "claim": "CISA, FBI, EPA and partners updated a joint advisory on Iranian-affiliated actors targeting programmable logic controllers across U.S. critical infrastructure, adding guidance to detect malicious changes in reusable code modules in Rockwell Automation PLC programs and expanding the manufacturer scope to include observed targeting of Schneider Electric, Siemens and possibly other PLC manufacturers.",
+      "publisher": "CISA (with FBI, EPA and U.S. government partners)",
+      "title": "CISA, FBI, EPA and U.S. Government Partners Update Warning of Iran-Affiliated Threat Actors Targeting U.S. Critical Infrastructure Programmable Logic Controllers",
+      "url": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/4219689",
+      "published": "2026-07-22",
+      "event_period": "Ongoing; original advisory April 2026 (AA26-097A)",
+      "scope": "Multiple U.S. critical infrastructure sectors named on the page: water and wastewater, energy, government services and facilities",
+      "kind": "government advisory update",
+      "qualification": "A multi-sector advisory, not a cold-chain incident. The page gives no count of incidents or organizations, names no victims, and gives no activity dates beyond 'ongoing'. Mitigations listed include controlling network access to PLCs and validating project files for unauthorized changes.",
+      "verification": "Bulletin page read on 2026-11-09. The fuller advisory AA26-097A was not fetched.",
+      "date_checked": "2026-11-09"
+    },
+    {
+      "id": "cisa-wws-plc-jul30",
+      "claim": "CISA said it was observing a significant increase in cyber threat actors targeting programmable logic controllers in the Water and Wastewater Systems sector, with actors modifying passwords to lock out operators and disconnecting PLCs by changing their IP addresses, resulting in boil water notices and sustained manual operations.",
+      "publisher": "CISA",
+      "title": "CISA Urges Water and Wastewater Systems Sector to Protect OT Against Activity Targeting PLCs",
+      "url": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/422e63c",
+      "published": "2026-07-30",
+      "event_period": "Described as currently observed; no dates given",
+      "scope": "U.S. Water and Wastewater Systems sector, entities of all sizes",
+      "kind": "government alert",
+      "qualification": "A water-sector lesson, not a cold-chain attack. No incident count, victims or attribution are given. Mitigations listed: disconnect PLCs from the internet and route remote access through a VPN or gateway, enable password protection and change defaults, allowlist remote-access IPs, and keep a known clean PLC backup. The alert notes cellular modems installed by operators, vendors or integrators may not be documented.",
+      "verification": "Bulletin page read on 2026-11-09.",
+      "date_checked": "2026-11-09"
+    },
+    {
+      "id": "tgw-lineage-hutchins",
+      "claim": "TGW Logistics announced it is delivering an automation solution (a shuttle warehouse, energy-efficient pallet and carton conveyors, and automated palletizing and depalletizing stations) for a Lineage refrigerated and frozen distribution center under construction in Hutchins, Texas. Go-live is anticipated at the end of 2027.",
+      "publisher": "TGW Logistics",
+      "title": "Lineage automates next-generation refrigerated warehouse in Texas with TGW Logistics",
+      "url": "https://www.tgw-group.com/en/news/detail/lineage-automates-next-generation-refrigerated-warehouse-in-texas-with-tgw-logistics-1/",
+      "published": "2026-06-09",
+      "event_period": "Announced June 2026; under construction; go-live anticipated end of 2027",
+      "scope": "One facility, Dallas-Fort Worth area, Texas",
+      "kind": "vendor press release",
+      "qualification": "Not operational. A vendor press release with forward-looking statements; it gives no pallet-position, square-footage or throughput figures, and states no energy figures. TGW's -30 C rating is a general product-line claim, not a project specification. The release does not describe warehouse control or management software for this project.",
+      "verification": "Press release page read on 2026-11-09.",
+      "date_checked": "2026-11-09"
+    },
+    {
+      "id": "iea-key-questions-ai",
+      "claim": "The IEA's 'Key questions on energy and AI' projects global data-centre electricity demand to roughly double by 2030.",
+      "publisher": "International Energy Agency",
+      "title": "Key questions on energy and AI: Executive summary",
+      "url": "https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary",
+      "published": "2026 (exact date not confirmed)",
+      "event_period": "Projection to 2030",
+      "scope": "Global",
+      "kind": "projection",
+      "qualification": "A projection, not a measurement, and not a statement about any single utility or tariff. Press summaries cite roughly 485 TWh in 2025 rising to about 950 TWh by 2030 (around 3% of global electricity demand); we do not publish those numbers because we could not confirm them on the primary page. Does not show that data centers cause any particular local rate increase.",
+      "verification": "SECONDARY ONLY. The IEA page returned HTTP 403 to our checker. The doubling projection was confirmed only through press summaries. Confirm against the report before relying on any figure.",
+      "date_checked": "2026-11-09"
+    },
+    {
+      "id": "nist-800-82r3",
+      "claim": "NIST SP 800-82 Rev. 3, 'Guide to Operational Technology (OT) Security', is the current final guidance, published September 2023. It provides guidance on securing OT while addressing its performance, reliability and safety requirements.",
+      "publisher": "National Institute of Standards and Technology",
+      "title": "SP 800-82 Rev. 3, Guide to Operational Technology (OT) Security",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "published": "2023-09 (final)",
+      "event_period": "Not a data series",
+      "scope": "OT security guidance, general",
+      "kind": "final guidance",
+      "qualification": "General guidance, not a compliance determination for any facility. It supersedes Rev. 2. A Revision 4 draft exists (see nist-800-82r4-ipd) and is not final.",
+      "verification": "Publication page read on 2026-11-09.",
+      "date_checked": "2026-11-09"
+    },
+    {
+      "id": "nist-800-82r4-ipd",
+      "claim": "NIST published an initial public draft of SP 800-82 Rev. 4 on 2026-09-21, aligned with Cybersecurity Framework 2.0, with comments open through 2026-11-30.",
+      "publisher": "National Institute of Standards and Technology",
+      "title": "SP 800-82 Rev. 4 (Initial Public Draft), Guide to Operational Technology (OT) Security",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r4/ipd",
+      "published": "2026-09-21 (draft)",
+      "event_period": "Comment period through 2026-11-30",
+      "scope": "OT security guidance, general",
+      "kind": "DRAFT guidance",
+      "qualification": "A draft, not final. Rev. 3 remains the current final guidance until a revision is finalized. Cited only to show the guidance is being revised.",
+      "verification": "Publication page read on 2026-11-09.",
+      "date_checked": "2026-11-09"
+    }
+  ]
+}

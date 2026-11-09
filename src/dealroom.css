@@ -1,0 +1,23 @@
+.drop { border: 2px dashed var(--ice-dim); border-radius: 10px; padding: 36px 24px; text-align: center; background: var(--panel); margin-top: 28px; display: grid; gap: 12px; justify-items: center; }
+.drop p { margin: 0; color: var(--muted); }
+.drop__btn { cursor: pointer; }
+.drop:focus-within .drop__btn { box-shadow: var(--focus-ring); }
+.dr-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); margin-top: 40px; align-items: start; }
+@media (max-width: 900px) { .dr-grid { grid-template-columns: minmax(0, 1fr); } }
+.files { display: grid; gap: 8px; }
+.files li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; align-items: center; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.files__name { grid-column: 1 / -1; display: grid; min-width: 0; }
+.files__name b { overflow-wrap: anywhere; font-weight: 600; }
+.files__name span { color: var(--muted); font-size: var(--text-small); }
+.files select { font: inherit; min-height: 40px; color: var(--text); background: var(--bg); border: 1px solid var(--ice-dim); border-radius: 4px; padding: 6px 10px; min-width: 0; max-width: 100%; }
+.check { display: grid; gap: 6px; }
+.check li { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 14px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+.check li[data-state='ok'] { border-color: var(--ccos-success); }
+.check li[data-state='ok'] .check__mark, .check li[data-state='ok'] .check__state { color: var(--ccos-success); }
+.check li[data-state='gap'] .check__state { color: var(--warm); }
+.check i { display: block; font-style: normal; font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em; }
+.check__state { font-size: var(--text-small); font-weight: 600; white-space: nowrap; }
+.gaps { margin-top: 40px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); overflow: hidden; }
+.gaps__head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.gaps__head h3 { margin: 0; font-size: var(--text-h4); }
+.gaps pre { margin: 0; padding: 18px; white-space: pre-wrap; overflow-wrap: anywhere; font-family: var(--font-body); font-size: var(--text-small); line-height: 1.7; color: var(--text); max-height: 420px; overflow: auto; }

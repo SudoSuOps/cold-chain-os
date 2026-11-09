@@ -1,0 +1,11 @@
+# Cloudflare Pages response headers.
+# The dev room is a local-only prototype. This policy makes the "no network requests" claim enforceable:
+# connect-src 'none' blocks fetch/XHR/WebSocket from the page, and form-action 'none' blocks form posts.
+/deal-room
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+/deal-room/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff

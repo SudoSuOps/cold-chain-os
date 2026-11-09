@@ -6,3 +6,9 @@ dist
 .DS_Store
 npm-debug.log*
 .vite
+
+# Private working directories (never commit client or NDA materials).
+# NOTE: .gitignore is not an access-control system. It does not protect files that are already tracked,
+# copied elsewhere, or present on a shared machine. See docs/nda-data-handling.md.
+private/
+deal-room-private/
