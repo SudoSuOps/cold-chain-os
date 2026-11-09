@@ -34,6 +34,6 @@
 ## Contact and participation
 
 Contact form: https://coldchainos.org/contact/
-Email: build@swarmandbee.ai (do not send confidential documents; there is no secured channel)
+Email: bull@coldchainos.org (do not send confidential documents; there is no secured channel)
 Open an issue: https://github.com/SudoSuOps/cold-chain-os/issues
 X: https://x.com/bestinbull

@@ -4,7 +4,7 @@ import { confirmationEmail, notificationEmail, type Branding } from './email.ts'
 export interface Env {
   /** Secret. Set in Cloudflare Pages (Settings > Variables and Secrets). Never committed. */
   RESEND_API_KEY?: string
-  /** Verified sender, e.g. "coldchainOS <hello@your-verified-domain>". Required by Resend. */
+  /** Verified sender. Defaults to the project address on the domain verified in Resend. */
   CONTACT_FROM?: string
   /** Where messages go. Defaults to the project inbox. */
   CONTACT_TO?: string
@@ -15,7 +15,8 @@ export interface Env {
 }
 
 export const SITE = 'https://coldchainos.org'
-const DEFAULT_TO = 'build@swarmandbee.ai'
+const DEFAULT_TO = 'bull@coldchainos.org'
+const DEFAULT_FROM = 'coldchainOS <bull@coldchainos.org>'
 const OWNER = 'Swarm & Bee LLC'
 const MIN_FILL_MS = 3000
 const MAX_AGE_MS = 24 * 60 * 60 * 1000
@@ -67,17 +68,18 @@ export async function handleContact(request: Request, env: Env, opts: { fetch?: 
   const v = validateContact(raw)
   if (!v.ok) return json(400, { ok: false, error: 'Please check the highlighted fields.', fields: v.errors })
 
-  if (!env.RESEND_API_KEY || !env.CONTACT_FROM) {
+  if (!env.RESEND_API_KEY) {
     return json(503, { ok: false, error: `The contact form isn't configured yet. Please email ${DEFAULT_TO}.` })
   }
   const to = env.CONTACT_TO || DEFAULT_TO
+  const from = env.CONTACT_FROM || DEFAULT_FROM
   const branding: Branding = { siteUrl: SITE, ownerName: OWNER, replyEmail: to }
   const id = uuid()
   const note = notificationEmail(branding, v.value, new Date(now()).toISOString())
 
   try {
     const res = await sendResend(f, env.RESEND_API_KEY, {
-      from: env.CONTACT_FROM, to: [to], reply_to: v.value.email, subject: note.subject, html: note.html, text: note.text,
+      from, to: [to], reply_to: v.value.email, subject: note.subject, html: note.html, text: note.text,
     }, `contact-${id}`)
     if (!res.ok) {
       console.error('contact: notification send failed', res.status) // status only; never log message content
@@ -92,7 +94,7 @@ export async function handleContact(request: Request, env: Env, opts: { fetch?: 
     try {
       const conf = confirmationEmail(branding, v.value)
       const res = await sendResend(f, env.RESEND_API_KEY, {
-        from: env.CONTACT_FROM, to: [v.value.email], reply_to: to, subject: conf.subject, html: conf.html, text: conf.text,
+        from, to: [v.value.email], reply_to: to, subject: conf.subject, html: conf.html, text: conf.text,
       }, `confirm-${id}`)
       if (!res.ok) console.error('contact: confirmation send failed', res.status)
     } catch {

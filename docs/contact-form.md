@@ -2,24 +2,24 @@
 
 `/contact/` posts JSON to a Cloudflare Pages Function (`functions/api/contact.ts`), which sends two branded emails through the [Resend](https://resend.com) API:
 
-1. **Notification** to the project inbox (default `build@swarmandbee.ai`), with the visitor as `Reply-To`.
+1. **Notification** to the project inbox (default `bull@coldchainos.org`), with the visitor as `Reply-To`.
 2. **Confirmation** to the visitor. It names the topic only and deliberately does not echo their message.
 
 Both use the coldchainOS logo, the Bull and the brand palette, with a plain-text alternative. Brand images are PNG copies under `public/email/` (many mail clients block SVG and WebP).
 
 ## Configuration (secrets are never committed)
 
-Set these in Cloudflare Pages: **Settings > Variables and secrets** (use *Secret* for the key), for Production and Preview.
+Changes to environment variables apply to the next deployment, so redeploy after changing them. Set these in Cloudflare Pages: **Settings > Variables and secrets** (use *Secret* for the key), for Production and Preview.
 
 | Name | Required | Purpose |
 |---|---|---|
 | `RESEND_API_KEY` | yes (secret) | Resend API key. Use a key restricted to sending. |
-| `CONTACT_FROM` | yes | Verified sender, e.g. `coldchainOS <hello@your-verified-domain>`. Resend only sends from a domain you have verified in its dashboard (adding DNS records is done by the domain owner). |
-| `CONTACT_TO` | no | Recipient. Defaults to `build@swarmandbee.ai`. |
+| `CONTACT_FROM` | no | Sender. Defaults to `coldchainOS <bull@coldchainos.org>`. Resend only sends from a domain verified in its dashboard (`coldchainos.org` is). |
+| `CONTACT_TO` | no | Recipient. Defaults to `bull@coldchainos.org`. |
 | `CONTACT_AUTO_REPLY` | no | Set to `false` to turn off the confirmation email. |
 | `CONTACT_ALLOWED_ORIGINS` | no | Extra allowed origins (for example a preview URL), comma-separated. |
 
-Until `RESEND_API_KEY` and `CONTACT_FROM` are both set, the form returns a graceful "not configured, please email build@swarmandbee.ai" message and sends nothing.
+Until `RESEND_API_KEY` is set, the form returns a graceful "not configured, please email bull@coldchainos.org" message and sends nothing.
 
 For local work with `wrangler pages dev`, copy `.dev.vars.example` to `.dev.vars` (git-ignored). If a key is ever pasted into chat, a ticket or a commit, rotate it in Resend.
 

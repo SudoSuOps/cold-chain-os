@@ -1,6 +1,6 @@
 # Credits and licensing
 
-Copyright holder of the repository's MIT-licensed code: Swarm & Bee LLC. Brand questions: build@swarmandbee.ai
+Copyright holder of the repository's MIT-licensed code: Swarm & Bee LLC. Brand questions: bull@coldchainos.org
 
 ## Brand assets
 

@@ -1,5 +1,5 @@
 export const REPO_URL = 'https://github.com/SudoSuOps/cold-chain-os'
 export const ISSUES_URL = 'https://github.com/SudoSuOps/cold-chain-os/issues'
 export const X_URL = 'https://x.com/bestinbull'
-export const CONTACT_EMAIL = 'build@swarmandbee.ai'
+export const CONTACT_EMAIL = 'bull@coldchainos.org'
 export const OWNER = 'Swarm & Bee LLC'

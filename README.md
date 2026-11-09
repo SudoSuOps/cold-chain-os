@@ -87,4 +87,4 @@ Not covered by the MIT License:
 
 ## Contact
 
-Use the form at `/contact/`, email build@swarmandbee.ai, or open a GitHub issue. Please do not send confidential documents; there is no secured channel for them. The form is a Cloudflare Pages Function that sends branded email through Resend. Setup, secrets and the abuse model are in `docs/contact-form.md`.
+Use the form at `/contact/`, email bull@coldchainos.org, or open a GitHub issue. Please do not send confidential documents; there is no secured channel for them. The form is a Cloudflare Pages Function that sends branded email through Resend. Setup, secrets and the abuse model are in `docs/contact-form.md`.

@@ -27,12 +27,12 @@ test('valid submission sends a branded notification and a confirmation', async (
   assert.equal(h.calls[0].url, 'https://api.resend.com/emails')
   assert.equal((h.calls[0].init.headers as Record<string, string>).authorization, 'Bearer re_test_key')
   const [n, c] = [payload(h.calls[0]), payload(h.calls[1])]
-  assert.deepEqual(n.to, ['build@swarmandbee.ai'])
+  assert.deepEqual(n.to, ['bull@coldchainos.org'])
   assert.equal(n.reply_to, 'ada@example.com')
   assert.equal(n.from, ENV.CONTACT_FROM)
   assert.match(n.subject, /^\[coldchainOS\] Bring a real problem: Ada Lovelace$/)
   assert.deepEqual(c.to, ['ada@example.com'])
-  assert.equal(c.reply_to, 'build@swarmandbee.ai')
+  assert.equal(c.reply_to, 'bull@coldchainos.org')
   for (const p of [n, c]) {
     assert.ok(p.html.includes('https://coldchainos.org/email/coldchainos-logo-480.png'), 'logo')
     assert.ok(p.html.includes('https://coldchainos.org/email/coldchainos-bull-240.png'), 'bull')
@@ -101,15 +101,22 @@ test('oversized and malformed bodies are rejected', async () => {
   assert.equal((await handleContact(req('{not json'), h.env, h.opts)).status, 400)
   assert.equal((await handleContact(req('[1,2]'), h.env, h.opts)).status, 400)
 })
-test('missing configuration gives a graceful 503 and leaks nothing', async () => {
-  for (const env of [{}, { RESEND_API_KEY: 're_x' }, { CONTACT_FROM: 'a@b.co' }]) {
+test('a missing API key gives a graceful 503 and leaks nothing', async () => {
+  for (const env of [{}, { CONTACT_FROM: 'a@b.co' }]) {
     const h = harness(); h.env = env as Env
     const res = await handleContact(req(good), h.env, h.opts)
     assert.equal(res.status, 503)
     const text = await res.text()
-    assert.ok(!text.includes('re_x') && text.includes('build@swarmandbee.ai'))
+    assert.ok(!text.includes('re_x') && text.includes('bull@coldchainos.org'))
     assert.equal(h.calls.length, 0)
   }
+})
+test('the sender defaults to the verified project domain when CONTACT_FROM is unset', async () => {
+  const h = harness(); h.env = { RESEND_API_KEY: 're_test_key' }
+  const res = await handleContact(req(good), h.env, h.opts)
+  assert.equal(res.status, 200)
+  assert.equal(payload(h.calls[0]).from, 'coldchainOS <bull@coldchainos.org>')
+  assert.deepEqual(payload(h.calls[0]).to, ['bull@coldchainos.org'])
 })
 test('Resend failure returns 502 without leaking the provider response', async () => {
   const h = harness({}, 422)
