@@ -28,6 +28,10 @@
     "a": "No. The published CRE sample records are model-generated training data, not extracted from real transactions. Property and tenant names are synthetic."
   },
   {
+    "q": "How do I contact the project?",
+    "a": "Email build@swarmandbee.ai, or open an issue on GitHub. Please do not send confidential documents by email; the project has no secured channel for them."
+  },
+  {
     "q": "How can I contribute?",
     "a": "Explore the GitHub repository and open an issue with a real problem, field knowledge, a dataset or a correction."
   }

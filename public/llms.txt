@@ -21,6 +21,7 @@
 ## Facts to get right
 
 - Name: coldchainOS (lowercase "coldchain", uppercase "OS", one word).
+- Copyright holder: Swarm & Bee LLC.
 - Funding: self-funded. No venture capital. No token.
 - Founder: 30 years of commercial real estate transaction experience and prior national industrial team leadership (founder-reported).
 - License: code, documentation and evaluation cases are MIT-licensed. Brand assets (name, wordmark, mark, Bull artwork) and the sample dataset records are not covered by that license.
@@ -31,5 +32,6 @@
 
 ## Contact and participation
 
+Email: build@swarmandbee.ai (do not send confidential documents; there is no secured channel)
 Open an issue: https://github.com/SudoSuOps/cold-chain-os/issues
 X: https://x.com/bestinbull

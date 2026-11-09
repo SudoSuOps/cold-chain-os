@@ -1,6 +1,6 @@
 import { Footer, Header } from './SiteChrome.tsx'
 import Icon, { ICONS, type IconName } from './Icon.tsx'
-import { ISSUES_URL, REPO_URL } from './links.ts'
+import { CONTACT_EMAIL, ISSUES_URL, REPO_URL } from './links.ts'
 
 const L = '/brand/logo/coldchainos-'
 const LOGOS = [
@@ -174,7 +174,8 @@ export default function BrandPage() {
               The coldchainOS name, wordmark, mark and Bull artwork belong to the project and are not covered by the
               project’s open-source code licence unless the project states otherwise. Contributors and the press may use
               the unmodified files to refer to coldchainOS. See the{' '}
-              <a href="/brand/NOTICE.md">credits and licensing notice</a> for fonts and asset provenance.
+              <a href="/brand/NOTICE.md">credits and licensing notice</a> for fonts and asset provenance. Brand questions:{' '}
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
             </p>
             <div className="cta-row">
               <a className="btn btn--primary" href={REPO_URL} rel="noopener">Explore the project</a>

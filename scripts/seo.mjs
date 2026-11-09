@@ -22,9 +22,11 @@ export function jsonLdFor(file, html = readFileSync(resolve('dist', file), 'utf8
     logo: `${SITE}/icons/favicon-512.png`,
     slogan: 'Does the cold chain pencil?',
     description: 'An independent, self-funded, open-source project building tools to connect source documents, operating evidence, transparent calculations and reviewable findings behind cold-storage decisions.',
+    email: 'build@swarmandbee.ai',
+    contactPoint: { '@type': 'ContactPoint', email: 'build@swarmandbee.ai', contactType: 'general inquiries' },
     sameAs: [REPO, X],
   }
-  const site = { '@type': 'WebSite', '@id': `${SITE}/#site`, url: `${SITE}/`, name: 'coldchainOS', publisher: { '@id': `${SITE}/#org` }, inLanguage: 'en-US' }
+  const site = { '@type': 'WebSite', '@id': `${SITE}/#site`, url: `${SITE}/`, name: 'coldchainOS', publisher: { '@id': `${SITE}/#org` }, copyrightHolder: { '@type': 'Organization', name: 'Swarm & Bee LLC' }, inLanguage: 'en-US' }
   const graph = [org, site]
   if (file === '404.html') return { '@context': 'https://schema.org', '@graph': graph }
   const page = { '@type': 'WebPage', '@id': `${url}#page`, url, name, description, isPartOf: { '@id': `${SITE}/#site` }, about: { '@id': `${SITE}/#org` }, inLanguage: 'en-US' }

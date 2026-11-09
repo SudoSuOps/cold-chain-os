@@ -85,3 +85,6 @@ Not covered by the MIT License:
 - **Sample dataset:** the CRE sample records in `public/data/cre-samples.json` have no license chosen yet; treat them as view-only.
 - **Cited third-party sources:** quoted and linked material belongs to its publishers.
 
+## Contact
+
+build@swarmandbee.ai, or open a GitHub issue. Please do not email confidential documents; there is no secured channel for them.

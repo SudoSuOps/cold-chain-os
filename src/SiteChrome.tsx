@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Wordmark from './Wordmark.tsx'
-import { REPO_URL, X_URL } from './links.ts'
+import { CONTACT_EMAIL, OWNER, REPO_URL, X_URL } from './links.ts'
 
 const NAV = [
   ['problem', 'The Problem'],
@@ -75,7 +75,8 @@ export function Footer({ home = false }: { home?: boolean }) {
         <a href="/new-era/">New era</a>
         <a href="/deal-room/">Dev room</a>
         <a href="/brand/">Brand</a>
-        <span>An independent project in active development.</span>
+        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+        <span>An independent project in active development. © 2026 {OWNER}</span>
       </div>
     </footer>
   )

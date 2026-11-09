@@ -1,5 +1,7 @@
 # Credits and licensing
 
+Copyright holder of the repository's MIT-licensed code: Swarm & Bee LLC. Brand questions: build@swarmandbee.ai
+
 ## Brand assets
 
 The coldchainOS name, wordmark, simplified Bull mark, the Bull character artwork and all derived compositions belong to the coldchainOS project. They are **not** covered by the project's open-source code licence unless the project states otherwise. Contributors and the press may use the unmodified files in this kit to refer to coldchainOS. Don't alter them, and don't imply endorsement.
