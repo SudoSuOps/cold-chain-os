@@ -68,7 +68,7 @@ for (const f of htmlFiles) {
   if (ld.length !== 1) fail(f, `expected 1 JSON-LD block, found ${ld.length}`)
   else { try { JSON.parse(ld[0][1]) } catch { fail(f, 'JSON-LD is not valid JSON') } }
   // pre-rendered content present
-  const root = (html.match(/<div id="root">([\s\S]*)<\/div><!--\/email_off-->\s*<\/body>/) ?? [])[1] ?? ''
+  const root = (html.match(/<div id="root">([\s\S]*)<\/div>(?:<script type="application\/json" id="page-data">[\s\S]*?<\/script>)?<!--\/email_off-->\s*<\/body>/) ?? [])[1] ?? ''
   if (!html.includes('<!--email_off--><div id="root">')) fail(f, 'missing email_off markers (Cloudflare would obfuscate addresses for crawlers)')
   if (root.length < 1500) fail(f, `pre-rendered content too small (${root.length} chars); crawlers would see an empty page`)
   // exactly one h1, ordered headings
@@ -113,6 +113,36 @@ for (const f of htmlFiles) {
   // forms must not post
   if (/<form[^>]*action=/.test(body)) fail(f, 'form with an action attribute')
 }
+
+// digest: posts, feed, machine-readable index
+const postFiles = htmlFiles.filter((f) => /^digest\/\d{4}-\d{2}-\d{2}\/index\.html$/.test(f))
+for (const f of postFiles) {
+  const html = read(f)
+  const date = f.split('/')[1]
+  const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => JSON.parse(m[1]))[0]
+  const bp = (ld?.['@graph'] ?? []).find((n) => n['@type'] === 'BlogPosting')
+  if (!bp) fail(f, 'missing BlogPosting JSON-LD')
+  else {
+    if (!bp.datePublished?.startsWith(date)) fail(f, 'datePublished does not match the post date')
+    if (!bp.citation?.length) fail(f, 'BlogPosting has no citations')
+    if (!bp.citation?.every((c) => /^https:/.test(c.url))) fail(f, 'non-https citation')
+  }
+  if (!/<meta property="og:type" content="article"/.test(html)) fail(f, 'og:type should be article')
+  if (!/article:published_time/.test(html)) fail(f, 'missing article:published_time')
+  if (!html.includes('id="page-data"')) fail(f, 'missing embedded page data (client could not hydrate)')
+  if (!/rel="alternate" type="application\/atom\+xml"/.test(html)) fail(f, 'missing feed autodiscovery link')
+  if (!/\bid="src-/.test(html)) fail(f, 'no sources section')
+  if (html.includes('{{')) fail(f, 'unfilled template placeholder')
+}
+if (existsSync(join(DIST, 'digest/post.html'))) fail('digest/post.html', 'template must not be published')
+if (postFiles.length) {
+  const feed = read('digest/feed.xml')
+  if (!feed.startsWith('<?xml') || !feed.includes('<feed xmlns="http://www.w3.org/2005/Atom">')) fail('digest/feed.xml', 'not a valid Atom feed header')
+  const opens = (feed.match(/<entry>/g) ?? []).length, closes = (feed.match(/<\/entry>/g) ?? []).length
+  if (opens !== postFiles.length || closes !== postFiles.length) fail('digest/feed.xml', `expected ${postFiles.length} entries`)
+  const idx = JSON.parse(read('digest/posts.json'))
+  if (idx.posts.length !== postFiles.length) fail('digest/posts.json', 'post count does not match built pages')
+} else warn('digest', 'no published posts')
 
 // sitemap <-> pages
 const sm = read('sitemap.xml')

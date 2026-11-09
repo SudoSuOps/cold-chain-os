@@ -1,0 +1,40 @@
+{
+  "$comment": "Human-readable schema for digest posts. The enforced rules live in scripts/digest-lib.mjs (npm run digest:check).",
+  "schema_version": 1,
+  "date": "YYYY-MM-DD (must match the filename: content/digest/YYYY-MM-DD.json)",
+  "status": "draft | published (drafts are never built, linked, fed or put in the sitemap)",
+  "title": "10-110 chars. Plain, specific, dated. No hype.",
+  "seo_title": "20-52 chars. Used for the <title> tag as \"seo_title — coldchainOS\". Short, specific, dated.",
+  "summary": "70-300 chars. Becomes the meta description and the feed summary.",
+  "takeaway": "20-280 chars. The pencil question for the day, in one sentence.",
+  "tags": ["1-6 lowercase slugs, e.g. energy, regulation, security, real-estate, last-mile, datasets"],
+  "published_at": "ISO timestamp on the post date",
+  "method": "20-600 chars. How the digest was researched and what was and was not read.",
+  "items": [
+    {
+      "id": "slug",
+      "headline": "10-140 chars",
+      "label": "public | illustrative | founder | planned | hypothesis",
+      "what_happened": "What the source documents, with its own dates and scope. 20-900 chars.",
+      "why_it_matters": "Why it matters for cold-storage evidence and underwriting. 20-900 chars.",
+      "not_established": "What it does NOT establish. 20-900 chars. Required.",
+      "review_question": "A practical question for an accountable person. Must end with a question mark.",
+      "source_ids": ["at least one source id"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "slug",
+      "publisher": "Who published it",
+      "title": "Exact title",
+      "url": "https only",
+      "published": "Date as stated by the source",
+      "accessed": "YYYY-MM-DD (on or before the post date)",
+      "scope": "Geography, sector, population",
+      "kind": "observed | estimated | forecast | regulatory | government advisory | draft guidance | final guidance | vendor announcement | survey estimate | projection | other",
+      "qualification": "What this source is not / limits",
+      "verification": "primary | secondary_only | user_supplied",
+      "verification_note": "Required unless verification is primary"
+    }
+  ]
+}

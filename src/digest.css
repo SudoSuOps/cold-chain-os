@@ -1,0 +1,23 @@
+.dg-list { display: grid; gap: 16px; margin-top: 28px; }
+.dg-card h3 { margin: 4px 0 10px; font-size: var(--text-h3); }
+.dg-card h3 a { color: var(--text); text-decoration: none; }
+.dg-card h3 a:hover { color: var(--ice); text-decoration: underline; }
+.dg-card p { color: var(--muted); }
+.dg-meta { font-size: var(--text-small); color: var(--ice) !important; margin: 0 !important; font-weight: 600; letter-spacing: 0.04em; }
+.dg-take { color: var(--text) !important; }
+.dg-crumb { font-size: var(--text-small); color: var(--muted); margin-bottom: 16px; }
+.dg-takeaway { font-family: var(--font-display); font-stretch: var(--font-display-stretch); font-weight: 650; font-size: var(--text-h3); line-height: 1.25; margin: 0; max-width: 34em; }
+.dg-items { display: grid; gap: 18px; margin-top: 28px; }
+.dg-item header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 14px; }
+.dg-item h2 { font-size: var(--text-h3); margin: 0; max-width: none; letter-spacing: var(--tracking-heading); }
+.dg-item dl { margin: 0; display: grid; gap: 0; font-size: var(--text-small); }
+.dg-item dl > div { display: grid; grid-template-columns: 190px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.dg-item dt { color: var(--muted); }
+.dg-item dd { margin: 0; color: var(--text); font-size: 1rem; }
+@media (max-width: 640px) { .dg-item dl > div { grid-template-columns: 1fr; gap: 2px; } }
+.dg-pager__row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; }
+.dg-pager__row a:last-child { text-align: right; }
+@media (max-width: 720px) { .dg-pager__row { grid-template-columns: 1fr; } .dg-pager__row a:last-child { text-align: left; } }
+.dg-latest { display: grid; gap: 6px; }
+.card .dg-takeaway { color: var(--text); }
+.dg-item .cite { font-size: 0.85rem; white-space: normal; }

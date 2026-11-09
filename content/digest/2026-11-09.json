@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-09",
+  "status": "published",
+  "title": "Digest, Nov 9, 2026: OT security comments, EIA’s next outlook, last-mile demand, HFC dates",
+  "seo_title": "Digest Nov 9, 2026: OT security, EIA, HFC dates",
+  "summary": "Four dated items for cold-storage owners and underwriters: NIST’s OT security draft is open for comment, EIA’s next outlook is due Nov 10, delivered-grocery growth, and EPA’s refrigerant installation dates.",
+  "takeaway": "Which of these four moves a line in our evidence file this week: the controls, the power bill, the route, or the equipment schedule?",
+  "tags": [
+    "security",
+    "energy",
+    "last-mile",
+    "regulation"
+  ],
+  "published_at": "2026-11-09T09:00:00-05:00",
+  "method": "Each source was read on the publisher’s own page on 2026-11-09 and checked against the dates it states. EIA’s Nov 10 release had not been published when this was written. Nothing here is a compliance, appraisal, engineering or investment opinion.",
+  "items": [
+    {
+      "id": "nist-ot-security-draft",
+      "headline": "NIST: OT security guide Rev. 4 is a draft open for comment through Nov 30",
+      "label": "public",
+      "what_happened": "NIST published an initial public draft of SP 800-82 Rev. 4, Guide to Operational Technology (OT) Security, on September 21, 2026, aligned with Cybersecurity Framework 2.0. Comments are open through November 30, 2026. Rev. 3, published September 2023, remains the current final guidance.",
+      "why_it_matters": "Refrigeration controllers, PLCs and warehouse automation are operational technology. A comment window is a rare chance for operators and engineers to say what the guidance should account for in performance, reliability and safety.",
+      "not_established": "It is a draft, not final, and not a compliance determination for any facility. It does not describe a cold-chain incident or say what any site should change.",
+      "review_question": "Has the person who maintains our controls read the draft, and do we want to comment before November 30?",
+      "source_ids": [
+        "nist-800-82r4-ipd",
+        "nist-800-82r3"
+      ]
+    },
+    {
+      "id": "eia-next-outlook",
+      "headline": "EIA: the Oct 6 outlook is current; the next release is due Nov 10",
+      "label": "public",
+      "what_happened": "EIA’s October 6, 2026 Short-Term Energy Outlook says U.S. electricity consumption rose 4% in 3Q26 from a year earlier, with the commercial sector up 5%. It forecasts commercial-sector demand, which includes data centers, growing 2.8% in 2027, and anticipates 2026 wholesale prices averaging $52 per MWh across 11 hubs, 11% above 2025. The next release is scheduled for November 10, 2026.",
+      "why_it_matters": "Energy is a line in every cold-storage pro forma. These are national signals to watch, and a new edition tomorrow may change them.",
+      "not_established": "National figures do not describe any one utility, tariff or site, and a wholesale price is not a retail bill. The outlook does not show that data centers raise any particular local rate.",
+      "review_question": "What do our own last 12 months of bills show, and did the energy, demand or rider line move?",
+      "source_ids": [
+        "eia-steo-oct26"
+      ]
+    },
+    {
+      "id": "delivered-grocery-growth",
+      "headline": "Brick Meets Click: U.S. online grocery sales up 20.7% in Q3, delivery drove most of it",
+      "label": "public",
+      "what_happened": "Brick Meets Click reported on October 15, 2026 that U.S. online grocery sales rose 20.7% year over year in 3Q26, with Delivery growing more than 30% and driving about three-quarters of the topline increase. On October 21 it reported September 2026 sales up just over 16%, average order frequency up 9.0%, and about two-thirds of Delivery orders placed to arrive within three hours.",
+      "why_it_matters": "Faster, more frequent delivery changes what local cold-storage nodes and routes are asked to do. It is demand context, not a measure of any route.",
+      "not_established": "These are survey-based grocery-sales estimates across fulfillment methods and categories. They are not cold-chain logistics revenue, refrigerated shipment counts or a software market, and the quarter and the single month are different periods.",
+      "review_question": "What would a failed or rushed delivery do to our cost per completed delivery at our actual order density?",
+      "source_ids": [
+        "bmc-3q26",
+        "bmc-sept26"
+      ]
+    },
+    {
+      "id": "epa-refrigerant-dates",
+      "headline": "EPA: HFC installation limits for new cold-storage systems, as listed on its sector page",
+      "label": "public",
+      "what_happened": "EPA’s Technology Transitions sector page, last updated August 28, 2026, restricts the installation of new systems using certain high-GWP HFCs. For cold storage warehouses it lists an interim limit of GWP 700 from July 27, 2026, then 150 (for charges of 200 lb or more) or 300 from January 1, 2032. EPA states that components used to repair existing systems are not subject to the restrictions, and issued a final reconsideration rule in May 2026.",
+      "why_it_matters": "Equipment type, refrigerant and installation dates affect future capital planning and what a buyer should ask to see.",
+      "not_established": "EPA says its tables are informational and not for compliance. The page does not summarize obligations for existing installed equipment, and nothing here says any facility must replace equipment now.",
+      "review_question": "Does the equipment schedule list refrigerant type and installation dates, so a qualified engineer can check them against the actual system?",
+      "source_ids": [
+        "epa-tt-sector",
+        "epa-tt-actions"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "nist-800-82r4-ipd",
+      "publisher": "National Institute of Standards and Technology",
+      "title": "SP 800-82 Rev. 4 (Initial Public Draft), Guide to Operational Technology (OT) Security",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r4/ipd",
+      "published": "2026-09-21 (draft); comments through 2026-11-30",
+      "accessed": "2026-11-09",
+      "scope": "General OT security guidance",
+      "kind": "draft guidance",
+      "qualification": "A draft, not final. Rev. 3 remains the current final guidance.",
+      "verification": "primary"
+    },
+    {
+      "id": "nist-800-82r3",
+      "publisher": "National Institute of Standards and Technology",
+      "title": "SP 800-82 Rev. 3, Guide to Operational Technology (OT) Security",
+      "url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "published": "2023-09 (final)",
+      "accessed": "2026-11-09",
+      "scope": "General OT security guidance",
+      "kind": "final guidance",
+      "qualification": "General guidance, not a compliance determination for any facility.",
+      "verification": "primary"
+    },
+    {
+      "id": "eia-steo-oct26",
+      "publisher": "U.S. Energy Information Administration",
+      "title": "Short-Term Energy Outlook: Electricity, Coal, and Renewables",
+      "url": "https://www.eia.gov/outlooks/steo/report/elec_coal_renew.php",
+      "published": "2026-10-06 (forecast completed 2026-10-01); next release 2026-11-10",
+      "accessed": "2026-11-09",
+      "scope": "United States; 11 wholesale hubs for the price figure",
+      "kind": "forecast",
+      "qualification": "The 3Q26 figures are estimates and the 2027 and price figures are forecasts. A newer edition is scheduled for 2026-11-10 and may supersede this one.",
+      "verification": "primary"
+    },
+    {
+      "id": "bmc-3q26",
+      "publisher": "Brick Meets Click",
+      "title": "U.S. eGrocery Sales for 3Q26 Climb 21% Versus Last Year",
+      "url": "https://www.brickmeetsclick.com/presses/u-s-egrocery-sales-for-3q26-climb-21-versus-last-year",
+      "published": "2026-10-15",
+      "accessed": "2026-11-09",
+      "scope": "United States; July to September 2026 surveys",
+      "kind": "survey estimate",
+      "qualification": "Survey-based grocery-sales estimates across fulfillment methods and categories. No sample size or product-category coverage is stated.",
+      "verification": "primary"
+    },
+    {
+      "id": "bmc-sept26",
+      "publisher": "Brick Meets Click",
+      "title": "Sept 2026: eGrocery sales up just over 16% year-over-year",
+      "url": "https://www.brickmeetsclick.com/insights/sept-2026-egrocery-sales-up-just-over-16-year-over-year",
+      "published": "2026-10-21",
+      "accessed": "2026-11-09",
+      "scope": "United States; September 2026 (survey fielded Sept 28 to 30)",
+      "kind": "survey estimate",
+      "qualification": "A single month, not comparable to the quarterly release. No dollar total, sample size or delivery/pickup mix is given.",
+      "verification": "primary"
+    },
+    {
+      "id": "epa-tt-sector",
+      "publisher": "U.S. Environmental Protection Agency",
+      "title": "Technology Transitions HFC Restrictions by Sector",
+      "url": "https://www.epa.gov/hfcs/technology-transitions-hfc-restrictions-sector",
+      "published": "Last updated 2026-08-28",
+      "accessed": "2026-11-09",
+      "scope": "United States, AIM Act Technology Transitions",
+      "kind": "regulatory",
+      "qualification": "EPA states the tables are informational and should not be relied on for compliance; see 40 CFR Part 84, Subpart B.",
+      "verification": "primary"
+    },
+    {
+      "id": "epa-tt-actions",
+      "publisher": "U.S. Environmental Protection Agency",
+      "title": "Regulatory Actions for Technology Transitions",
+      "url": "https://www.epa.gov/hfcs/regulatory-actions-technology-transitions",
+      "published": "Last updated 2026-07-28",
+      "accessed": "2026-11-09",
+      "scope": "United States",
+      "kind": "regulatory",
+      "qualification": "The page lists a May 2026 final reconsideration rule; we did not open the Federal Register notice, so its specific changes are not summarized.",
+      "verification": "primary"
+    }
+  ]
+}

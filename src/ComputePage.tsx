@@ -126,6 +126,34 @@ export default function ComputePage() {
           </div>
         </section>
 
+        <section className="cr-hw" aria-labelledby="hw-h">
+          <div className="wrap">
+            <p className="kicker">The hardware · Founder-reported</p>
+            <h2 id="hw-h">Powered by NVIDIA Blackwell.</h2>
+            <p className="section__intro">
+              The compute behind the dataset work is NVIDIA Blackwell-generation GPUs. These are the models and
+              memory sizes the founder reports; unit counts and benchmarks are not published yet.
+            </p>
+            <div className="hw-grid">
+              <article className="hw-card">
+                <p className="hw-card__tag">Workstation class</p>
+                <h3>NVIDIA RTX PRO 6000 Blackwell</h3>
+                <p className="hw-card__mem"><b>96 GB</b> GPU memory</p>
+                <p>Room for large models and long-context work on a single card.</p>
+              </article>
+              <article className="hw-card">
+                <p className="hw-card__tag">Performance class</p>
+                <h3>NVIDIA GeForce RTX 5090 (ASUS ROG Astral)</h3>
+                <p className="hw-card__mem"><b>32 GB</b> GPU memory</p>
+                <p>Blackwell consumer flagship for fine-tuning runs and dataset generation.</p>
+              </article>
+            </div>
+            <p className="hw-note" role="note">
+              Founder-reported hardware, not an audited inventory. The rack animation above stays a schematic.
+            </p>
+          </div>
+        </section>
+
         <section className="cr-line" aria-labelledby="line-h">
           <div className="wrap">
             <p className="kicker">The dataset line</p>

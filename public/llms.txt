@@ -9,9 +9,10 @@
 - [Last mile](https://coldchainos.org/last-mile/): definitions, recipients, product categories, sourced market context and an illustrative route-economics calculator.
 - [New era](https://coldchainos.org/new-era/): AI, robotics, compute and edge-appliance design goals; confidentiality and cybersecurity review questions; a dated evidence snapshot; draft evaluation cases.
 - [Datasets](https://coldchainos.org/datasets/): a small sample of model-generated CRE question-and-answer records, with raw JSON and an independent math re-check.
-- [Compute room](https://coldchainos.org/compute/): an illustrative simulation of a GPU and dataset pipeline. Not live telemetry.
+- [Compute room](https://coldchainos.org/compute/): an illustrative simulation of a GPU and dataset pipeline (not live telemetry), plus founder-reported hardware: NVIDIA RTX PRO 6000 Blackwell (96 GB) and GeForce RTX 5090 (32 GB, ASUS ROG Astral); no unit counts or benchmarks published.
 - [Dev room](https://coldchainos.org/deal-room/): a local-only evidence checklist prototype. Nothing is uploaded.
 - [Contact](https://coldchainos.org/contact/): a contact form (plain email; no attachments; please send nothing confidential).
+- [Digest](https://coldchainos.org/digest/): a daily, dated, sourced research note. Each item states what a source documents, why it matters, and what it does not establish. Feed: https://coldchainos.org/digest/feed.xml. Machine-readable: https://coldchainos.org/digest/posts.json.
 - [Brand](https://coldchainos.org/brand/): logos, colour, type, icons and voice.
 
 ## Source of truth

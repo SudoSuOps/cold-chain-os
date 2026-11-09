@@ -72,3 +72,13 @@
   .gpu__bar > span, .gpu { transition: none !important; }
   .rack__led, .pipe__q i, .rec { animation: none !important; }
 }
+
+.cr-hw { padding-block: var(--space); }
+.hw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; margin-top: 28px; }
+.hw-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+.hw-card h3 { margin: 6px 0 10px; }
+.hw-card p { color: var(--muted); }
+.hw-card__tag { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ice); }
+.hw-card__mem { color: var(--text); }
+.hw-card__mem b { font-family: var(--font-mono); font-size: 1.6rem; color: var(--ice); margin-right: 6px; }
+.hw-note { margin-top: 20px; color: var(--muted); font-size: 0.9rem; }

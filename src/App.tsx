@@ -4,6 +4,7 @@ import Icon, { type IconName } from './Icon.tsx'
 import { Footer, Header } from './SiteChrome.tsx'
 import { ISSUES_URL, REPO_URL } from './links.ts'
 import faq from './faq.json'
+import { prettyDate, type DigestSummary } from './digestTypes.ts'
 
 function Hero() {
   return (
@@ -100,6 +101,29 @@ function NewEraTeaser() {
             <a className="btn btn--primary" href="/new-era/">Explore the new era</a>
           </div>
           <p className="fineprint">Investigation and planned work, with a dated source snapshot.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LatestDigest({ latest }: { latest?: DigestSummary }) {
+  if (!latest) return null
+  return (
+    <section className="section" id="digest" aria-labelledby="dg-t-h">
+      <div className="wrap why-band">
+        <div>
+          <p className="kicker">Latest from the Digest</p>
+          <h2 id="dg-t-h">{latest.title}</h2>
+        </div>
+        <div className="dg-latest">
+          <p className="dg-meta" style={{ color: 'var(--ice)', fontWeight: 600, margin: 0 }}><time dateTime={latest.date}>{prettyDate(latest.date)}</time></p>
+          <p>{latest.summary}</p>
+          <p><b style={{ color: 'var(--text)' }}>The pencil question:</b> {latest.takeaway}</p>
+          <div className="cta-row">
+            <a className="btn btn--primary" href={`/digest/${latest.date}/`}>Read today’s digest</a>
+            <a className="btn btn--ghost" href="/digest/">All digests</a>
+          </div>
         </div>
       </div>
     </section>
@@ -292,7 +316,7 @@ function FinalCta() {
   )
 }
 
-export default function App() {
+export default function App({ latest }: { latest?: DigestSummary }) {
   return (
     <div id="top">
       <a className="skip" href="#main">Skip to content</a>
@@ -300,6 +324,7 @@ export default function App() {
       <main id="main">
         <Hero />
         <Why />
+        <LatestDigest latest={latest} />
         <LastMileTeaser />
         <NewEraTeaser />
         <Problem />

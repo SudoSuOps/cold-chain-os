@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "date": "YYYY-MM-DD",
+  "status": "draft",
+  "title": "Digest, Mon D, YYYY: one specific line about what matters",
+  "seo_title": "Digest Mon D, YYYY: three or four topic words",
+  "summary": "Seventy to three hundred characters that say what is in this digest and why a cold-storage owner, broker or engineer would read it. No hype.",
+  "takeaway": "The one pencil question this digest leaves with the reader?",
+  "tags": ["energy"],
+  "published_at": "YYYY-MM-DDT09:00:00-05:00",
+  "method": "Describe what was searched and which primary pages were actually read, and what could not be read.",
+  "items": [
+    {
+      "id": "short-slug",
+      "headline": "Publisher: what happened, in plain words",
+      "label": "public",
+      "what_happened": "What the source documents, with its own dates, scope and numbers exactly as stated.",
+      "why_it_matters": "Why this matters for cold-storage evidence, underwriting or operations.",
+      "not_established": "What this does not show. Be specific about scope and limits.",
+      "review_question": "What practical question should an accountable person ask?",
+      "source_ids": ["source-slug"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-slug",
+      "publisher": "Publisher",
+      "title": "Exact title of the page or report",
+      "url": "https://example.org/exact-page",
+      "published": "Date as stated by the source",
+      "accessed": "YYYY-MM-DD",
+      "scope": "Geography, sector and population the source covers",
+      "kind": "observed",
+      "qualification": "What this source is not, and its limits.",
+      "verification": "primary"
+    }
+  ]
+}

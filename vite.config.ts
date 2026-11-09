@@ -15,6 +15,8 @@ export default defineConfig({
         'last-mile': resolve(__dirname, 'last-mile/index.html'),
         'new-era': resolve(__dirname, 'new-era/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
+        digest: resolve(__dirname, 'digest/index.html'),
+        'digest-post': resolve(__dirname, 'digest/post.html'),
         '404': resolve(__dirname, '404.html'),
         'deal-room': resolve(__dirname, 'deal-room/index.html'),
       },
